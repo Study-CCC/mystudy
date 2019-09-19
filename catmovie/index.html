@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/weui/2.0.0/style/weui.min.css" rel="stylesheet">
+
+    <title>猫眼电影</title>
+</head>
+
+<body>
+    <div class="container"><div class="movie-title fixed">
+        <a href="#" class="arrow"></a>
+        <span>影片详情</span></div></div>
+    <a href="#" class="movie-shop fixed">优惠购票</a>
+    <div class="page">
+    <!-- section1 -->
+    <section class="movie-header">
+        <div class="filter"></div>
+        <div class="movie-content">
+            <img src="./Images/header-bg.jpg" alt="" class="movieimg">
+            <img src="./Images/bofang.png" alt="" class="play">
+            <div class="movie-introdution">
+                <p class="movie-name">老师·好</p>
+                <p class="Emovie">Song of Youth</p></div>
+        </div>
+        <div class="movie-score">
+            <div class="movie-star">&nbsp;<span class="star-num"></span></div>
+            <div class="movie-num">(<span></span>人评分)</div>
+        </div>
+        <div class="movie-detail">
+            <p class="type"></p>
+            <p class="suxing"></p>
+            <p class="time"></p>
+        </div>
+        <div class="wantsee block"><img class="wantseeimg" src="./Images/heart.png">想看</div>
+        <div class="commentnum block"><img class="commentnumimg" src="./Images/star.png">评分</div>
+        <div id="toast" style="opacity: 0; display: none;">
+            <div class="weui-mask_transparent"></div>
+            <div class="weui-toast">
+                <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+                <p class="weui-toast__content">已完成</p>
+            </div>
+        </div>
+    </section>
+     <!-- section2 -->
+     <section class="section">
+     <div class="movie-introduce">
+            <span class="detail"></span>
+            <div class="click-arrow"><i></i></div>
+        </div>
+    </section>
+    <!-- section3 -->
+    <section class="movie-actor"></section>
+    <!-- section4 -->
+    <section class="movie-BoxOffice"></section>
+    <!-- section5 -->
+    <section class="movie-video"></section>
+    <!-- section6 -->
+    <section class="movie-comment"></section>
+</div>
+    <script>
+        (function(){
+            $.ajax({
+                url:'https://www.easy-mock.com/mock/5d2ed7be1418505a5562ae28/movie/movie',
+                type:'get',
+                success:function(res){
+                    console.log(res);
+                    star(res.data.star);
+                    $('.star-num').html(res.data.grade);
+                    $('.movie-num span').html(res.data.people);
+                    $('.type').html(res.data.type);
+                    $('.suxing').html(res.data.where+'/'+res.data.time+'分钟');
+                    $('.time').html(res.data.date);
+                    $('.detail').html(res.data.desc);
+                }
+            })
+        })();
+        function star(e){
+           for(var i=5;i>0;i--){
+               if(e-i<=-1)
+               $('.movie-star').prepend('<img class="img" src="./images/star2.png"></img>');
+               else if(-1<e-i&&e-i<0)
+               $('.movie-star').prepend('<img class="img" src="./images/star-h.png"></img>');
+               else 
+               $('.movie-star').prepend('<img class="img" src="./images/star.png"></img>');
+              
+           }
+        }
+        $('.click-arrow').click(function(){
+            if($(this).hasClass('close')){
+                $(this).removeClass('close')
+            }
+        })
+    </script>
+</body>
+
+</html>

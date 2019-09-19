@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+<image class="container-image"src="/images/bg.jpg"></image>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<block wx:for="{{items}}">
+<view class="footer">
+  <view class="message">
+    <icon class="dot"></icon>
+    <text class="name">{{item.name}}</text>
+    <text class="time">{{item.time}}</text>
+    <text class="number">{{item.number}}</text>
+    <text class="am">AM</text>
+  </view>
+</view>
+</block>
