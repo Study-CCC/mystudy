@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--告诉浏览器需要处理的内容是html-->
+<html lang="en">
+<!--html开始  lang="en"告诉浏览器是英语，可翻译 -->
+
+<head>
+    <!--提供有关文档内容和标注信息-->
+    <meta charset="UTF-8">
+    <!--编码-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" min="-100" max="100" step="100">
+    <input type="range" min="-100" max="100" step="100">
+    <input type="text" list="list1">
+    <datalist id="list1">
+        <option value="苹果"></option>
+        <option value="香蕉"></option>
+        <option value="菠萝"></option>
+    </datalist>
+    <br>
+    <!--只有在提交表单的时候才会检查输入的数据-->
+    <form>邮箱：<input type="email" pattern="[^@]*@[^@]*">
+        <!--验证电子邮箱地址-->
+       url: <input type="url"><button>提交</button></form>
+    <!--验证url完整度-->
+    <form>
+        <!--通过form点击图片可以在url中获取点击地方的x跟y值-->
+        <input type="image" src="abc.jpg">
+    </form>
+</body>
+
+</html>
