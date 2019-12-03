@@ -1,0 +1,144 @@
+{
+    "buyCar": [
+        {
+            "buycarBrand": "东风小康",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/dongfengxiaokang.png"
+        },
+        {
+            "buycarBrand": "大众",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/dazhong.png"
+        },
+        {
+            "buycarBrand": "本田",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/honda.png"
+        },
+        {
+            "buycarBrand": "丰田",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/toyota.png"
+        },
+        {
+            "buycarBrand": "日产",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/richan.png"
+        },
+        {
+            "buycarBrand": "奔驰",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/benz.png"
+        },
+        {
+            "buycarBrand": "别克",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/buick.png"
+        },
+        {
+            "buycarBrand": "福特",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/ford.png"
+        },
+        {
+            "buycarBrand": "现代",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/hyundai.png"
+        },
+        {
+            "buycarBrand": "奥迪",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/audi.png"
+        },
+        {
+            "buycarBrand": "宝马",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/bmw.png"
+        },
+        {
+            "buycarBrand": "起亚",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/kia.png"
+        },
+        {
+            "buycarBrand": "马自达",
+            "buycarBrandImg": "//sta.guazistatic.com/static/c2c/web/che-logo/mazda.png"
+        }
+    ],
+    "allBrand": [
+        {
+            "carInitial": "A",
+            "car": "|奥迪|阿尔法·罗密欧|阿斯顿·马丁|Alpina|ARCFOX|安驰|AC Schnitzer"
+        },
+        {
+            "carInitial": "B",
+            "car": "|本田|别克|奔驰|宝马|比亚迪|宝骏|标致|奔腾|北汽幻速|北汽绅宝|保时捷|北京|北汽威旺|宝沃汽车|比速汽车|北汽|宾利|北汽道达|巴博斯|北汽新能源"
+        },
+        {
+            "carInitial": "C",
+            "car": "|长安|传祺|长安商用|长城|川汽野马|长安欧尚|昌河|成功汽车|长安跨越"
+        },
+        {
+            "carInitial": "D",
+            "car": "|东风小康|大众|东风风行|东南|东风风神|东风风光|DS|道奇|东风|东风风度|大乘汽车|大迪|大宇|大发|电咖汽车"
+        },
+        {
+            "carInitial": "F",
+            "car": "|丰田|福特|菲亚特|福田|福迪|法拉利|福汽启腾|富奇"
+        },
+        {
+            "carInitial": "G",
+            "car": "|观致|GMC|广汽吉奥|广汽集团|国金汽车|光冈"
+        },
+        {
+            "carInitial": "H",
+            "car": "|哈弗|海马|汉腾|红旗|华泰|黄海|华颂|哈飞|海格|悍马|恒天|华晨鑫源|黑豹|华普|华泰新能源|汇众|华凯"
+        },
+        {
+            "carInitial": "J",
+            "car": "|吉利|Jeep|江淮|捷豹|金杯|江铃|君马汽车|捷途|金龙|金旅|九龙|江铃集团轻汽|江铃集团新能源|江南"
+        },
+        {
+            "carInitial": "K",
+            "car": "|凯迪拉克|克莱斯勒|开瑞|凯翼|卡升|卡尔森|康迪|卡威|凯马"
+        },
+        {
+            "carInitial": "L",
+            "car": "|路虎|雷克萨斯|铃木|陆风|猎豹|雷诺|林肯|领克|力帆|理念|路特斯|拉达汽车|Lorinser|劳斯莱斯|兰博基尼|劳伦士"
+        },
+        {
+            "carInitial": "M",
+            "car": "|马自达|MG|MINI|玛莎拉蒂|迈凯伦|摩根|迈巴赫|美亚"
+        },
+        {
+            "carInitial": "N",
+            "car": "|纳智捷|南骏|南京金龙"
+        },
+        {
+            "carInitial": "O",
+            "car": "|讴歌|欧宝|欧朗"
+        },
+        {
+            "carInitial": "Q",
+            "car": "|起亚|奇瑞|启辰|青年莲花|庆铃|乔治·巴顿|前途"
+        },
+        {
+            "carInitial": "R",
+            "car": "|日产|荣威|瑞麒|瑞驰新能源"
+        },
+        {
+            "carInitial": "S",
+            "car": "|斯柯达|三菱|Smart|斯巴鲁|上汽大通|斯威|双龙|思铭|双环|萨博|时代|SPRINGO|赛麟|陕汽通家"
+        },
+        {
+            "carInitial": "T",
+            "car": "|特斯拉|通用|唐骏汽车|泰卡特|天马|腾势"
+        },
+        {
+            "carInitial": "W",
+            "car": "|五菱|沃尔沃|WEY|五十铃|蔚来|威麟|威马汽车|威兹曼"
+        },
+        {
+            "carInitial": "X",
+            "car": "|现代|雪佛兰|雪铁龙|夏利|西雅特|新凯|星途|新雅途|西安奥拓"
+        },
+        {
+            "carInitial": "Y",
+            "car": "|英菲尼迪|一汽|英致|依维柯|永源|宇通客车|云雀|云度|御捷|扬子"
+        },
+        {
+            "carInitial": "Z",
+            "car": "|众泰|中华|中兴|知豆|中欧|中顺|之诺"
+        }
+    ],
+    "carPrice": "|3万以下|3-5万|5-7万|7-9万|9-12万|12-16万|16-20万",
+    "carType": "|超值|急售|练手车|准新车|严选车|SUV|查看更多"
+}

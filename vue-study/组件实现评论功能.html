@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <tem :list="list" @func="loadComment"></tem>
+       <ul>
+            <li v-for="item in list" :key="item.id">{{item.cmt}}----{{item.auth}}</li>
+        </ul>
+    </div>
+    <template id="temp1">
+        <div class="item">
+            评论:<textarea cols="30" rows="10" v-model="cmt"></textarea>
+            作者:<input type="text" v-model="auth">
+            <input type="button" value="提交" @click="commit">
+        </div>
+    </template>
+    <script>
+        var tem = {
+            template: '#temp1',
+            data() {
+                return {
+                    cmt: '',
+                    auth: ''
+                }
+            },
+            methods: {
+                commit() {
+                    var cmt = this.cmt
+                    var auth = this.auth
+                    var item = { cmt: cmt, auth: auth }
+                    var list = JSON.parse(localStorage.getItem('cmts') || '[]')
+                    list.unshift(item)
+                    localStorage.setItem('cmts', JSON.stringify(list))
+                    this.cmt = ''
+                    this.auth = ''
+                    this.$emit('func')
+                }
+
+            },
+            props: ['list']
+
+        }
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                list: [{ cmt: 'good', auth: '张三' },
+                { cmt: '很好', auth: '李四' }],
+
+            },
+            methods: {
+                loadComment() {
+                    var list = JSON.parse(localStorage.getItem('cmts'))
+                    this.list = list
+                }
+            },
+            created() {
+                this.loadComment()
+            },
+            components: {
+                tem
+            }
+        });
+    </script>
+</body>
+<style>
+
+</style>
+
+</html>

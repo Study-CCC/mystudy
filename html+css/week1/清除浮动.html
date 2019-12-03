@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+</body>
+<style>
+  
+    .box1{
+        border: 2px red solid;
+    }
+    .box2{
+        height: 200px;
+        width: 200px;
+        float: left;
+        background-color: blue;
+    }
+    .clearfix::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    .clearfix{   /*兼容IE6*/
+        zoom: 1;
+    }
+</style>
+
+</html>

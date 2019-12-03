@@ -1,0 +1,168 @@
+{
+    "data": {
+        "group": [
+            {
+                "index": 1,
+                "img": "//cli-sta.guazistatic.com/c2c_web/ershou2.9622dba5dc5179b7d20a0084d5c41990.png",
+                "hoverImg": "//cli-sta.guazistatic.com/c2c_web/ershou.5b609a564a8686c63a02793d97cbc552.jpg",
+                "icon": "//cli-sta.guazistatic.com/c2c_web/icon-green.8a53822f90031dd1735dc21761dee88e.png"
+            },
+            {
+                "index": 2,
+                "img": "//cli-sta.guazistatic.com/c2c_web/yanxuan2.5ad2f9dcd798ee4f9b9469875327a0a2.png",
+                "hoverImg": "//cli-sta.guazistatic.com/c2c_web/yanxuan.2623b8cd75f445cf45f0e06e8cb659c0.jpg",
+                "icon":"//cli-sta.guazistatic.com/c2c_web/icon-orange.51903464d913d05af169037192a9a7a3.png"
+            },
+            {
+                "index": 3,
+                "img": "//cli-sta.guazistatic.com/c2c_web/maiche2.8741e6b8d150855cd0914bc5bbd40232.jpg",
+                "hoverImg": "//cli-sta.guazistatic.com/c2c_web/maiche.d9a067b58defd2e4acbff86ffdc8ea43.jpg",
+                "icon":"//cli-sta.guazistatic.com/c2c_web/icon-red.ecb6a2ab68f94c146d18af307dde200c.png"
+            },
+            {
+                "index": 4,
+                "img": "//cli-sta.guazistatic.com/c2c_web/jinrong2.cbeaf4a85c95d8b9fb2b05fa526e0c4f.png",
+                "hoverImg": "//cli-sta.guazistatic.com/c2c_web/jinrong.e0f1db2687a8a398fee6235ebeacbaa4.jpg",
+                "icon":"//cli-sta.guazistatic.com/c2c_web/icon-turquise.c19efab2e6c9a00303867b4dbcd5f607.png"
+            }
+        ],
+        "title1": [
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115174544d28f1534f10bf4826b3072f21f243ebe.png?imageView2/2",
+                "caritemName": "两厢轿车",
+                "caritemPrice": "0.18万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1811151746295824e8bab7648f8b0d14d61394972fa0.png?imageView2/2",
+                "caritemName": "三厢轿车",
+                "caritemPrice": "0.15万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn18111518174315fa9321f36c8d4ff56bcdb3e5d85281.png?imageView2/2",
+                "caritemName": "跑车",
+                "caritemPrice": "2.38万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn18111518181754b768dafa98bd754201e0a7e774299b.png?imageView2/2",
+                "caritemName": "SUV",
+                "caritemPrice": "0.50万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115181910598eea3b5c66ade1022e5ba17cb07c9b.png?imageView2/2",
+                "caritemName": "MPV",
+                "caritemPrice": "0.72万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1903211203205c132654095589a10e2866b35ea76e89.png?imageView2/2",
+                "caritemName": "面包车",
+                "caritemPrice": "0.16万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115182144dd23714992db4b74ab5498346951daaf.png?imageView2/2",
+                "caritemName": "皮卡",
+                "caritemPrice": "1.30万起"
+            }
+        ],
+        "title2": [
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115182708299d6f5f31f91331488cfaaea89a0007.png?imageView2/2",
+                "caritemName": "跑车",
+                "caritemPrice": "9.68万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn18111518284074d9b6733ecd02121b5c73ff2855fb9b.png?imageView2/2",
+                "caritemName": "SUV",
+                "caritemPrice": "2.15万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115183038a030b53c8749241ec9b99d0927b4d8bf.png?imageView2/2",
+                "caritemName": "MPV",
+                "caritemPrice": "2.50万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1811151825247ac56493aac3d8714bd381ed8385251f.png?imageView2/2",
+                "caritemName": "两厢轿车",
+                "caritemPrice": "2.44万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115182640a9f97dda2c103e942773c4ff9588329c.png?imageView2/2",
+                "caritemName": "三厢轿车",
+                "caritemPrice": "2.38万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn19032112012283e9682e6d99f7071614a429f9632490.png?imageView2/2",
+                "caritemName": "面包车",
+                "caritemPrice": "2.50万起"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115183858bcb4b38aab8aea80077aeca5b7140f5b.png?imageView2/2",
+                "caritemName": "皮卡",
+                "caritemPrice": "15.50万起"
+            }
+        ],
+        "title3": [
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn18111518525148272f676b2f2e98eb13475b9901a76c.png?imageView2/2",
+                "caritemName": "宝马5系",
+                "caritemPrice": "成交价21.3万"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115185503faaa25ac2c78a0c08da9938e4b34d645.png?imageView2/2",
+                "caritemName": "本田雅阁",
+                "caritemPrice": "成交价13.5万"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn18111518560687ecfe2622d5e06c6d01a2a6dd20ddeb.png?imageView2/2",
+                "caritemName": "大众高尔夫",
+                "caritemPrice": "成交价6.8万"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1811151913451b02227aa924a6b8c8122fa4aca99b39.png?imageView2/2",
+                "caritemName": "奔驰GLK级",
+                "caritemPrice": "成交价22.9万"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115191425c6616455f8c9303288008a8e8da138b6.png?imageView2/2",
+                "caritemName": "雪佛兰迈锐宝",
+                "caritemPrice": "成交价7.3万"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1811151915145e10f96d1b128a474a5267783a4eae12.png?imageView2/2",
+                "caritemName": "马自达昂克赛拉",
+                "caritemPrice": "成交价8.66万"
+            }
+        ],
+        "title4": [
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1811151916584ead660ab471cde379611c2c1af33f54.png?imageView2/2",
+                "caritemName": "5万内练手车",
+                "caritemPrice": "每天只需几十元"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115191718ad814f72b8061226554eb9653c161843.png?imageView2/2",
+                "caritemName": "工薪族最爱",
+                "caritemPrice": "月供只要1500"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181115191842839fa4a4f94d77120cf4e602b0ecafbd.png?imageView2/2",
+                "caritemName": "SUV家庭代步首选",
+                "caritemPrice": "同首付，买辆宽敞的"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn18111519185812383e73e8109c6a49bd8816bee98938.png?imageView2/2",
+                "caritemName": "准新车",
+                "caritemPrice": "低首付高品质"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn181227200452df5d498ed1e9137ff44dc12e663db274.png?imageView2/2",
+                "caritemName": "奔驰宝马开回家",
+                "caritemPrice": "首付不到5万元"
+            },
+            {
+                "caritemImg": "https://image1.guazistatic.com/qn1811151920537af84bd6a253fb661c771360b6543b12.png?imageView2/2",
+                "caritemName": "车主急售实惠",
+                "caritemPrice": "买得早不如刚刚好"
+            }
+        ]
+    }
+}

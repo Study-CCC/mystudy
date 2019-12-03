@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p id="h3">{{a}}</p>
+    </div>
+    <script>
+        var vm=new Vue({
+           el:'#app',
+           data:{
+               a:"1"
+           },
+           methods:{
+           },
+           beforeCreate() {
+                   console.log(this.a)
+               },
+               created() {
+                   console.log(this.a)
+               },
+               beforeMount() {
+                console.log(document.getElementById('h3').innerText)
+               },
+               mounted() {
+                document.getElementById('h3').innerText="2"
+               },
+               beforeUpdate() {
+                   
+               },
+               updated() {
+                   
+               },
+               beforeDestroy() {
+                   
+               },
+               destroyed() {
+                   
+               },
+        });
+    </script>
+</body>
+
+</html>

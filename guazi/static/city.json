@@ -1,0 +1,1877 @@
+{
+    "surroundingCity": "|吉安|宜春|赣州",
+    "hotCity": "|北京|上海|广州|深圳|成都|重庆|杭州|苏州|沈阳|武汉",
+    "data":{
+        "A": [
+            {
+                "id": 102089,
+                "domain": "anji",
+                "name": "\u5b89\u5409",
+                "firstC": "A",
+                "active": false
+            },
+            {
+                "id": 39,
+                "domain": "anshun",
+                "name": "\u5b89\u987a",
+                "firstC": "A",
+                "active": false
+            },
+            {
+                "id": 57,
+                "domain": "anshan",
+                "name": "\u978d\u5c71",
+                "firstC": "A",
+                "active": false
+            },
+            {
+                "id": 109,
+                "domain": "anyang",
+                "name": "\u5b89\u9633",
+                "firstC": "A",
+                "active": false
+            },
+            {
+                "id": 127,
+                "domain": "anqing",
+                "name": "\u5b89\u5e86",
+                "firstC": "A",
+                "active": false
+            },
+            {
+                "id": 184,
+                "domain": "ankang",
+                "name": "\u5b89\u5eb7",
+                "firstC": "A",
+                "active": false
+            }
+        ],
+        "B": [
+            {
+                "id": 6,
+                "domain": "baoding",
+                "name": "\u4fdd\u5b9a",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 12,
+                "domain": "bj",
+                "name": "\u5317\u4eac",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 41,
+                "domain": "bijie",
+                "name": "\u6bd5\u8282",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 89,
+                "domain": "baishan",
+                "name": "\u767d\u5c71",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 122,
+                "domain": "binzhou",
+                "name": "\u6ee8\u5dde",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 125,
+                "domain": "bengbu",
+                "name": "\u868c\u57e0",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 146,
+                "domain": "baotou",
+                "name": "\u5305\u5934",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 178,
+                "domain": "baoji",
+                "name": "\u5b9d\u9e21",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 281,
+                "domain": "bazhong",
+                "name": "\u5df4\u4e2d",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 314,
+                "domain": "bozhou",
+                "name": "\u4eb3\u5dde",
+                "firstC": "B",
+                "active": false
+            },
+            {
+                "id": 317,
+                "domain": "beihai",
+                "name": "\u5317\u6d77",
+                "firstC": "B",
+                "active": false
+            }
+        ],
+        "C": [
+            {
+                "id": 102866,
+                "domain": "changshou",
+                "name": "\u957f\u5bff",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 8,
+                "domain": "chengde",
+                "name": "\u627f\u5fb7",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 9,
+                "domain": "cangzhou",
+                "name": "\u6ca7\u5dde",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 15,
+                "domain": "cq",
+                "name": "\u91cd\u5e86",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 45,
+                "domain": "cd",
+                "name": "\u6210\u90fd",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 69,
+                "domain": "changzhou",
+                "name": "\u5e38\u5dde",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 84,
+                "domain": "cc",
+                "name": "\u957f\u6625",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 128,
+                "domain": "chuzhou",
+                "name": "\u6ec1\u5dde",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 148,
+                "domain": "chifeng",
+                "name": "\u8d64\u5cf0",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 158,
+                "domain": "changzhi",
+                "name": "\u957f\u6cbb",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 204,
+                "domain": "cs",
+                "name": "\u957f\u6c99",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 210,
+                "domain": "changde",
+                "name": "\u5e38\u5fb7",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 211,
+                "domain": "chenzhou",
+                "name": "\u90f4\u5dde",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 289,
+                "domain": "chaoyang",
+                "name": "\u671d\u9633",
+                "firstC": "C",
+                "active": false
+            },
+            {
+                "id": 315,
+                "domain": "\u6c60\u5dde",
+                "name": "\u6c60\u5dde",
+                "firstC": "C",
+                "active": false
+            }
+        ],
+        "D": [
+            {
+                "id": 100596,
+                "domain": "dayi",
+                "name": "\u5927\u9091",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 100587,
+                "domain": "dujiangyan",
+                "name": "\u90fd\u6c5f\u5830",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 101581,
+                "domain": "danyang",
+                "name": "\u4e39\u9633",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 24,
+                "domain": "dg",
+                "name": "\u4e1c\u839e",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 48,
+                "domain": "deyang",
+                "name": "\u5fb7\u9633",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 53,
+                "domain": "dazhou",
+                "name": "\u8fbe\u5dde",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 56,
+                "domain": "dl",
+                "name": "\u5927\u8fde",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 59,
+                "domain": "dandong",
+                "name": "\u4e39\u4e1c",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 98,
+                "domain": "daqing",
+                "name": "\u5927\u5e86",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 117,
+                "domain": "dongying",
+                "name": "\u4e1c\u8425",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 156,
+                "domain": "datong",
+                "name": "\u5927\u540c",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 237,
+                "domain": "dali",
+                "name": "\u5927\u7406",
+                "firstC": "D",
+                "active": false
+            },
+            {
+                "id": 308,
+                "domain": "dezhou",
+                "name": "\u5fb7\u5dde",
+                "firstC": "D",
+                "active": false
+            }
+        ],
+        "E": [
+            {
+                "id": 150,
+                "domain": "eerduosi",
+                "name": "\u9102\u5c14\u591a\u65af",
+                "firstC": "E",
+                "active": false
+            },
+            {
+                "id": 331,
+                "domain": "enshi",
+                "name": "\u6069\u65bd",
+                "firstC": "E",
+                "active": false
+            }
+        ],
+        "F": [
+            {
+                "id": 102864,
+                "domain": "fuling",
+                "name": "\u6daa\u9675",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 1002886,
+                "domain": "fengjie",
+                "name": "\u5949\u8282",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 100997,
+                "domain": "lvliang",
+                "name": "\u6c7e\u9633",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 20,
+                "domain": "foshan",
+                "name": "\u4f5b\u5c71",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 58,
+                "domain": "fushun",
+                "name": "\u629a\u987a",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 75,
+                "domain": "fz",
+                "name": "\u798f\u5dde",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 129,
+                "domain": "fuyang",
+                "name": "\u961c\u9633",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 223,
+                "domain": "\u629a\u5dde",
+                "name": "\u629a\u5dde",
+                "firstC": "F",
+                "active": false
+            },
+            {
+                "id": 318,
+                "domain": "fangchenggang",
+                "name": "\u9632\u57ce\u6e2f",
+                "firstC": "F",
+                "active": false
+            }
+        ],
+        "G": [
+            {
+                "id": 16,
+                "domain": "gz",
+                "name": "\u5e7f\u5dde",
+                "firstC": "G",
+                "active": false
+            },
+            {
+                "id": 36,
+                "domain": "gy",
+                "name": "\u8d35\u9633",
+                "firstC": "G",
+                "active": false
+            },
+            {
+                "id": 134,
+                "domain": "gl",
+                "name": "\u6842\u6797",
+                "firstC": "G",
+                "active": false
+            },
+            {
+                "id": 220,
+                "domain": "ganzhou",
+                "name": "\u8d63\u5dde",
+                "firstC": "G",
+                "active": false
+            },
+            {
+                "id": 275,
+                "domain": "guangyuan",
+                "name": "\u5e7f\u5143",
+                "firstC": "G",
+                "active": false
+            },
+            {
+                "id": 278,
+                "domain": "guangan",
+                "name": "\u5e7f\u5b89",
+                "firstC": "G",
+                "active": false
+            }
+        ],
+        "H": [
+            {
+                "id": 102869,
+                "domain": "hechuan",
+                "name": "\u5408\u5ddd",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 1002021,
+                "domain": "heshan",
+                "name": "\u9e64\u5c71",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 1001193,
+                "domain": "haifeng",
+                "name": "\u6d77\u4e30",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 4,
+                "domain": "handan",
+                "name": "\u90af\u90f8",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 11,
+                "domain": "hengshui",
+                "name": "\u8861\u6c34",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 23,
+                "domain": "huizhou",
+                "name": "\u60e0\u5dde",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 26,
+                "domain": "hz",
+                "name": "\u676d\u5dde",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 30,
+                "domain": "huzhou",
+                "name": "\u6e56\u5dde",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 72,
+                "domain": "huaian",
+                "name": "\u6dee\u5b89",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 93,
+                "domain": "hrb",
+                "name": "\u54c8\u5c14\u6ee8",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 123,
+                "domain": "hf",
+                "name": "\u5408\u80a5",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 145,
+                "domain": "nmg",
+                "name": "\u547c\u548c\u6d69\u7279",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 182,
+                "domain": "hanzhong",
+                "name": "\u6c49\u4e2d",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 195,
+                "domain": "huangshi",
+                "name": "\u9ec4\u77f3",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 207,
+                "domain": "hengyang",
+                "name": "\u8861\u9633",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 268,
+                "domain": "heyuan",
+                "name": "\u6cb3\u6e90",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 310,
+                "domain": "huainan",
+                "name": "\u6dee\u5357",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 311,
+                "domain": "huaibei",
+                "name": "\u6dee\u5317",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 328,
+                "domain": "huanggang",
+                "name": "\u9ec4\u5188",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 336,
+                "domain": "huaihua",
+                "name": "\u6000\u5316",
+                "firstC": "H",
+                "active": false
+            },
+            {
+                "id": 338,
+                "domain": "heze",
+                "name": "\u83cf\u6cfd",
+                "firstC": "H",
+                "active": false
+            }
+        ],
+        "J": [
+            {
+                "id": 102868,
+                "domain": "jiangjin",
+                "name": "\u6c5f\u6d25",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 100866,
+                "domain": "juxian",
+                "name": "\u8392\u53bf",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 1003272,
+                "domain": "jiyang",
+                "name": "\u6d4e\u9633",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 21,
+                "domain": "jiangmen",
+                "name": "\u6c5f\u95e8",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 29,
+                "domain": "jiaxing",
+                "name": "\u5609\u5174",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 32,
+                "domain": "jinhua",
+                "name": "\u91d1\u534e",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 60,
+                "domain": "jinzhou",
+                "name": "\u9526\u5dde",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 85,
+                "domain": "jilin",
+                "name": "\u5409\u6797",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 100,
+                "domain": "jiamusi",
+                "name": "\u4f73\u6728\u65af",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 106,
+                "domain": "jiaozuo",
+                "name": "\u7126\u4f5c",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 113,
+                "domain": "jn",
+                "name": "\u6d4e\u5357",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 159,
+                "domain": "jincheng",
+                "name": "\u664b\u57ce",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 161,
+                "domain": "jinzhong",
+                "name": "\u664b\u4e2d",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 198,
+                "domain": "jingzhou",
+                "name": "\u8346\u5dde",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 200,
+                "domain": "jingmen",
+                "name": "\u8346\u95e8",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 217,
+                "domain": "jiujiang",
+                "name": "\u4e5d\u6c5f",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 221,
+                "domain": "jian",
+                "name": "\u5409\u5b89",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 272,
+                "domain": "jieyang",
+                "name": "\u63ed\u9633",
+                "firstC": "J",
+                "active": false
+            },
+            {
+                "id": 304,
+                "domain": "jining",
+                "name": "\u6d4e\u5b81",
+                "firstC": "J",
+                "active": false
+            }
+        ],
+        "K": [
+            {
+                "id": 101199,
+                "domain": "kaiping",
+                "name": "\u5f00\u5e73",
+                "firstC": "K",
+                "active": false
+            },
+            {
+                "id": 225,
+                "domain": "km",
+                "name": "\u6606\u660e",
+                "firstC": "K",
+                "active": false
+            },
+            {
+                "id": 293,
+                "domain": "kaifeng",
+                "name": "\u5f00\u5c01",
+                "firstC": "K",
+                "active": false
+            }
+        ],
+        "L": [
+            {
+                "id": 102037,
+                "domain": "linhai",
+                "name": "\u4e34\u6d77",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 100985,
+                "domain": "lishi",
+                "name": "\u79bb\u77f3",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 10,
+                "domain": "langfang",
+                "name": "\u5eca\u574a",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 37,
+                "domain": "liupanshui",
+                "name": "\u516d\u76d8\u6c34",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 47,
+                "domain": "luzhou",
+                "name": "\u6cf8\u5dde",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 50,
+                "domain": "leshan",
+                "name": "\u4e50\u5c71",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 62,
+                "domain": "liaoyang",
+                "name": "\u8fbd\u9633",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 71,
+                "domain": "lianyungang",
+                "name": "\u8fde\u4e91\u6e2f",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 82,
+                "domain": "longyan",
+                "name": "\u9f99\u5ca9",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 104,
+                "domain": "luoyang",
+                "name": "\u6d1b\u9633",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 110,
+                "domain": "luohe",
+                "name": "\u6f2f\u6cb3",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 121,
+                "domain": "laiwu",
+                "name": "\u83b1\u829c",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 132,
+                "domain": "luan",
+                "name": "\u516d\u5b89",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 133,
+                "domain": "liuzhou",
+                "name": "\u67f3\u5dde",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 164,
+                "domain": "linfen",
+                "name": "\u4e34\u6c7e",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 166,
+                "domain": "lz",
+                "name": "\u5170\u5dde",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 213,
+                "domain": "loudi",
+                "name": "\u5a04\u5e95",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 285,
+                "domain": "lishui",
+                "name": "\u4e3d\u6c34",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 307,
+                "domain": "linyi",
+                "name": "\u4e34\u6c82",
+                "firstC": "L",
+                "active": false
+            },
+            {
+                "id": 309,
+                "domain": "liaocheng",
+                "name": "\u804a\u57ce",
+                "firstC": "L",
+                "active": false
+            }
+        ],
+        "M": [
+            {
+                "id": 100486,
+                "domain": "meihekou",
+                "name": "\u6885\u6cb3\u53e3",
+                "firstC": "M",
+                "active": false
+            },
+            {
+                "id": 22,
+                "domain": "maoming",
+                "name": "\u8302\u540d",
+                "firstC": "M",
+                "active": false
+            },
+            {
+                "id": 49,
+                "domain": "mianyang",
+                "name": "\u7ef5\u9633",
+                "firstC": "M",
+                "active": false
+            },
+            {
+                "id": 126,
+                "domain": "maanshan",
+                "name": "\u9a6c\u978d\u5c71",
+                "firstC": "M",
+                "active": false
+            },
+            {
+                "id": 266,
+                "domain": "meizhou",
+                "name": "\u6885\u5dde",
+                "firstC": "M",
+                "active": false
+            },
+            {
+                "id": 279,
+                "domain": "meishan",
+                "name": "\u7709\u5c71",
+                "firstC": "M",
+                "active": false
+            },
+            {
+                "id": 302,
+                "domain": "mudanjiang",
+                "name": "\u7261\u4e39\u6c5f",
+                "firstC": "M",
+                "active": false
+            }
+        ],
+        "N": [
+            {
+                "id": 101664,
+                "domain": "nankang",
+                "name": "\u5357\u5eb7",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 27,
+                "domain": "nb",
+                "name": "\u5b81\u6ce2",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 51,
+                "domain": "nanchong",
+                "name": "\u5357\u5145",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 65,
+                "domain": "nj",
+                "name": "\u5357\u4eac",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 70,
+                "domain": "nantong",
+                "name": "\u5357\u901a",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 81,
+                "domain": "nanping",
+                "name": "\u5357\u5e73",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 83,
+                "domain": "ningde",
+                "name": "\u5b81\u5fb7",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 111,
+                "domain": "nanyang",
+                "name": "\u5357\u9633",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 142,
+                "domain": "nn",
+                "name": "\u5357\u5b81",
+                "firstC": "N",
+                "active": false
+            },
+            {
+                "id": 214,
+                "domain": "nc",
+                "name": "\u5357\u660c",
+                "firstC": "N",
+                "active": true
+            },
+            {
+                "id": 277,
+                "domain": "neijiang",
+                "name": "\u5185\u6c5f",
+                "firstC": "N",
+                "active": false
+            }
+        ],
+        "P": [
+            {
+                "id": 100588,
+                "domain": "pengzhou",
+                "name": "\u5f6d\u5dde",
+                "firstC": "P",
+                "active": false
+            },
+            {
+                "id": 63,
+                "domain": "panjin",
+                "name": "\u76d8\u9526",
+                "firstC": "P",
+                "active": false
+            },
+            {
+                "id": 77,
+                "domain": "putian",
+                "name": "\u8386\u7530",
+                "firstC": "P",
+                "active": false
+            },
+            {
+                "id": 105,
+                "domain": "pingdingshan",
+                "name": "\u5e73\u9876\u5c71",
+                "firstC": "P",
+                "active": false
+            },
+            {
+                "id": 216,
+                "domain": "pingxiang",
+                "name": "\u840d\u4e61",
+                "firstC": "P",
+                "active": false
+            },
+            {
+                "id": 274,
+                "domain": "panzhihua",
+                "name": "\u6500\u679d\u82b1",
+                "firstC": "P",
+                "active": false
+            },
+            {
+                "id": 294,
+                "domain": "puyang",
+                "name": "\u6fee\u9633",
+                "firstC": "P",
+                "active": false
+            }
+        ],
+        "Q": [
+            {
+                "id": 102865,
+                "domain": "qj",
+                "name": "\u9ed4\u6c5f",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 102859,
+                "domain": "qijiang",
+                "name": "\u7da6\u6c5f",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 1001016,
+                "domain": "qingxu",
+                "name": "\u6e05\u5f90",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 100468,
+                "domain": "qianguoxian",
+                "name": "\u524d\u90ed\u5c14\u7f57\u65af",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 3,
+                "domain": "qinhuangdao",
+                "name": "\u79e6\u7687\u5c9b",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 33,
+                "domain": "quzhou",
+                "name": "\u8862\u5dde",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 79,
+                "domain": "quanzhou",
+                "name": "\u6cc9\u5dde",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 94,
+                "domain": "qiqihaer",
+                "name": "\u9f50\u9f50\u54c8\u5c14",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 114,
+                "domain": "qd",
+                "name": "\u9752\u5c9b",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 136,
+                "domain": "qinzhou",
+                "name": "\u94a6\u5dde",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 203,
+                "domain": "qianjiang",
+                "name": "\u6f5c\u6c5f",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 226,
+                "domain": "qujing",
+                "name": "\u66f2\u9756",
+                "firstC": "Q",
+                "active": false
+            },
+            {
+                "id": 270,
+                "domain": "qingyuan",
+                "name": "\u6e05\u8fdc",
+                "firstC": "Q",
+                "active": false
+            }
+        ],
+        "R": [
+            {
+                "id": 1001494,
+                "domain": "rudong",
+                "name": "\u5982\u4e1c",
+                "firstC": "R",
+                "active": false
+            },
+            {
+                "id": 100849,
+                "domain": "rongcheng",
+                "name": "\u8363\u6210",
+                "firstC": "R",
+                "active": false
+            },
+            {
+                "id": 306,
+                "domain": "rizhao",
+                "name": "\u65e5\u7167",
+                "firstC": "R",
+                "active": false
+            }
+        ],
+        "S": [
+            {
+                "id": 1001516,
+                "domain": "suining1",
+                "name": "\u7762\u5b81",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 1,
+                "domain": "sjz",
+                "name": "\u77f3\u5bb6\u5e84",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 13,
+                "domain": "sh",
+                "name": "\u4e0a\u6d77",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 17,
+                "domain": "sz",
+                "name": "\u6df1\u5733",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 19,
+                "domain": "shantou",
+                "name": "\u6c55\u5934",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 31,
+                "domain": "shaoxing",
+                "name": "\u7ecd\u5174",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 55,
+                "domain": "sy",
+                "name": "\u6c88\u9633",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 67,
+                "domain": "su",
+                "name": "\u82cf\u5dde",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 78,
+                "domain": "sanming",
+                "name": "\u4e09\u660e",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 86,
+                "domain": "siping",
+                "name": "\u56db\u5e73",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 90,
+                "domain": "songyuan",
+                "name": "\u677e\u539f",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 130,
+                "domain": "ahsuzhou",
+                "name": "\u5bbf\u5dde",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 197,
+                "domain": "shiyan",
+                "name": "\u5341\u5830",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 208,
+                "domain": "shaoyang",
+                "name": "\u90b5\u9633",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 224,
+                "domain": "shangrao",
+                "name": "\u4e0a\u9976",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 276,
+                "domain": "suining",
+                "name": "\u9042\u5b81",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 292,
+                "domain": "suqian",
+                "name": "\u5bbf\u8fc1",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 296,
+                "domain": "sanmenxia",
+                "name": "\u4e09\u95e8\u5ce1",
+                "firstC": "S",
+                "active": false
+            },
+            {
+                "id": 297,
+                "domain": "shangqiu",
+                "name": "\u5546\u4e18",
+                "firstC": "S",
+                "active": false
+            }
+        ],
+        "T": [
+            {
+                "id": 100872,
+                "domain": "tengzhou",
+                "name": "\u6ed5\u5dde",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 2,
+                "domain": "tangshan",
+                "name": "\u5510\u5c71",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 14,
+                "domain": "tj",
+                "name": "\u5929\u6d25",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 35,
+                "domain": "zjtaizhou",
+                "name": "\u53f0\u5dde",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 88,
+                "domain": "tonghua",
+                "name": "\u901a\u5316",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 155,
+                "domain": "ty",
+                "name": "\u592a\u539f",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 291,
+                "domain": "jstaizhou",
+                "name": "\u6cf0\u5dde",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 305,
+                "domain": "taian",
+                "name": "\u6cf0\u5b89",
+                "firstC": "T",
+                "active": false
+            },
+            {
+                "id": 312,
+                "domain": "tongling",
+                "name": "\u94dc\u9675",
+                "firstC": "T",
+                "active": false
+            }
+        ],
+        "W": [
+            {
+                "id": 102036,
+                "domain": "wenling",
+                "name": "\u6e29\u5cad",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 102863,
+                "domain": "wanzhou",
+                "name": "\u4e07\u5dde",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 28,
+                "domain": "wenzhou",
+                "name": "\u6e29\u5dde",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 66,
+                "domain": "wx",
+                "name": "\u65e0\u9521",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 119,
+                "domain": "weifang",
+                "name": "\u6f4d\u574a",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 120,
+                "domain": "wei",
+                "name": "\u5a01\u6d77",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 124,
+                "domain": "wuhu",
+                "name": "\u829c\u6e56",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 135,
+                "domain": "wuzhou",
+                "name": "\u68a7\u5dde",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 180,
+                "domain": "weinan",
+                "name": "\u6e2d\u5357",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 194,
+                "domain": "wh",
+                "name": "\u6b66\u6c49",
+                "firstC": "W",
+                "active": false
+            },
+            {
+                "id": 241,
+                "domain": "xj",
+                "name": "\u4e4c\u9c81\u6728\u9f50",
+                "firstC": "W",
+                "active": false
+            }
+        ],
+        "X": [
+            {
+                "id": 1001019,
+                "domain": "xinfu",
+                "name": "\u5ffb\u5e9c",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 100996,
+                "domain": "xiaoyi",
+                "name": "\u5b5d\u4e49",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 5,
+                "domain": "xingtai",
+                "name": "\u90a2\u53f0",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 68,
+                "domain": "xuzhou",
+                "name": "\u5f90\u5dde",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 76,
+                "domain": "xm",
+                "name": "\u53a6\u95e8",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 108,
+                "domain": "xinxiang",
+                "name": "\u65b0\u4e61",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 176,
+                "domain": "xa",
+                "name": "\u897f\u5b89",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 186,
+                "domain": "xn",
+                "name": "\u897f\u5b81",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 196,
+                "domain": "xiangyang",
+                "name": "\u8944\u9633",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 206,
+                "domain": "xiangtan",
+                "name": "\u6e58\u6f6d",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 218,
+                "domain": "xinyu",
+                "name": "\u65b0\u4f59",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 295,
+                "domain": "xuchang",
+                "name": "\u8bb8\u660c",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 298,
+                "domain": "xinyang",
+                "name": "\u4fe1\u9633",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 316,
+                "domain": "xuancheng",
+                "name": "\u5ba3\u57ce",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 327,
+                "domain": "xiaogan",
+                "name": "\u5b5d\u611f",
+                "firstC": "X",
+                "active": false
+            },
+            {
+                "id": 329,
+                "domain": "xianning",
+                "name": "\u54b8\u5b81",
+                "firstC": "X",
+                "active": false
+            }
+        ],
+        "Y": [
+            {
+                "id": 102038,
+                "domain": "yuhuan",
+                "name": "\u7389\u73af",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 102870,
+                "domain": "yongchuan",
+                "name": "\u6c38\u5ddd",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 1001147,
+                "domain": "yunan",
+                "name": "\u4e91\u5b89",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 100456,
+                "domain": "yanji",
+                "name": "\u5ef6\u5409",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 52,
+                "domain": "yibin",
+                "name": "\u5b9c\u5bbe",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 61,
+                "domain": "yingkou",
+                "name": "\u8425\u53e3",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 73,
+                "domain": "yancheng",
+                "name": "\u76d0\u57ce",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 74,
+                "domain": "yangzhou",
+                "name": "\u626c\u5dde",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 118,
+                "domain": "yantai",
+                "name": "\u70df\u53f0",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 138,
+                "domain": "gxyulin",
+                "name": "\u7389\u6797",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 157,
+                "domain": "yangquan",
+                "name": "\u9633\u6cc9",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 162,
+                "domain": "yuncheng",
+                "name": "\u8fd0\u57ce",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 165,
+                "domain": "yc",
+                "name": "\u94f6\u5ddd",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 181,
+                "domain": "yanan",
+                "name": "\u5ef6\u5b89",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 183,
+                "domain": "sxyulin",
+                "name": "\u6986\u6797",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 199,
+                "domain": "yichang",
+                "name": "\u5b9c\u660c",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 209,
+                "domain": "yueyang",
+                "name": "\u5cb3\u9633",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 212,
+                "domain": "yongzhou",
+                "name": "\u6c38\u5dde",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 222,
+                "domain": "jxyichun",
+                "name": "\u5b9c\u6625",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 227,
+                "domain": "yuxi",
+                "name": "\u7389\u6eaa",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 269,
+                "domain": "yangjiang",
+                "name": "\u9633\u6c5f",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 280,
+                "domain": "yaan",
+                "name": "\u96c5\u5b89",
+                "firstC": "Y",
+                "active": false
+            },
+            {
+                "id": 335,
+                "domain": "yiyang",
+                "name": "\u76ca\u9633",
+                "firstC": "Y",
+                "active": false
+            }
+        ],
+        "Z": [
+            {
+                "id": 100912,
+                "domain": "zouping",
+                "name": "\u90b9\u5e73",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 18,
+                "domain": "zhuhai",
+                "name": "\u73e0\u6d77",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 25,
+                "domain": "zhongshan",
+                "name": "\u4e2d\u5c71",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 38,
+                "domain": "zunyi",
+                "name": "\u9075\u4e49",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 46,
+                "domain": "zigong",
+                "name": "\u81ea\u8d21",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 80,
+                "domain": "zhangzhou",
+                "name": "\u6f33\u5dde",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 103,
+                "domain": "zz",
+                "name": "\u90d1\u5dde",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 115,
+                "domain": "zibo",
+                "name": "\u6dc4\u535a",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 116,
+                "domain": "zaozhuang",
+                "name": "\u67a3\u5e84",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 205,
+                "domain": "zhuzhou",
+                "name": "\u682a\u6d32",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 229,
+                "domain": "zhaotong",
+                "name": "\u662d\u901a",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 264,
+                "domain": "zhanjiang",
+                "name": "\u6e5b\u6c5f",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 265,
+                "domain": "zhaoqing",
+                "name": "\u8087\u5e86",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 282,
+                "domain": "ziyang",
+                "name": "\u8d44\u9633",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 290,
+                "domain": "zhenjiang",
+                "name": "\u9547\u6c5f",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 299,
+                "domain": "zhoukou",
+                "name": "\u5468\u53e3",
+                "firstC": "Z",
+                "active": false
+            },
+            {
+                "id": 300,
+                "domain": "zhumadian",
+                "name": "\u9a7b\u9a6c\u5e97",
+                "firstC": "Z",
+                "active": false
+            }]
+        }
+    
+}

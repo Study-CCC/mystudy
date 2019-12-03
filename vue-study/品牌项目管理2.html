@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vue-resource-1.3.4.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>name:&nbsp;<input type="text" v-model="name">&nbsp;id:&nbsp;<input type="text" v-model="id">&nbsp;<input
+                type="button" value="提交" @click="add">&nbsp;搜索名称关键字:&nbsp;<input type="text"
+                v-model="searchname">&nbsp;<input type="button" value="搜索" @keyup.enter="search(searchname)"></p>
+        <br />
+        <ul>
+            <li>Id</li>
+            <li>品牌名称</li>
+            <li>添加时间</li>
+            <li>操作</li>
+        </ul>
+        <ul v-for="(item,key) in search(searchname) " :key="item.id">
+            <li>{{key}}</li>
+            <li>{{item.name}}</li>
+            <li>{{item.id}}</li>
+            <li><input type="button" value="删除" @click="Delete(item)"></li>
+        </ul>
+    </div>
+    <script>
+        // 配置全局接口请求域名
+        Vue.http.options.root = 'http://vue.studyit.io/';
+        // 配置全局启动 emulateJSON
+        Vue.http.options.emulateJSON = true;
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                id: '',
+                items: [
+                    { name: '张三', id: '001' },
+                    { name: '李四', id: '002' }
+                ],
+                searchname: ''
+            },
+            methods: {
+                add(){
+                    let items = this.items
+                    var item = {}
+                    item.name = this.name
+                    item.id = this.id
+                    items.push(item)
+                },
+                Delete(item){
+                   console.log(this.items.indexOf(item))
+                    this.items.splice(this.items.indexOf(item),1)
+                },
+                search(searchname) {
+                    // var items = this.items.map((item,key) => {    // map后无论是否为空都会返回一个结果
+                        var items = this.items.filter(item => {
+                        if(item.name.includes(searchname))   
+                            return item   
+                    })
+                    console.log(items)
+                    return items
+                },
+                getList() {
+                    this.$http.get('api/getprodlist').then( results => {
+                        const result = results.body
+                        if(result.status === 0)
+                        this.items = result.message
+                        else
+                        alert('数据获取失败')
+                    })
+                }
+            },
+            created() {
+              this.getList();  
+            },
+        });
+    </script>
+</body>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        ul {
+            display: flex;
+            width: 100%;
+            list-style: none;
+            text-align: center;
+            border: 1px solid black;
+        }
+    
+        li {
+            border-right: 1px solid black
+        }
+    
+        li:nth-child(1) {
+            flex: 1;
+        }
+    
+        li:nth-child(2) {
+            flex: 2;
+        }
+    
+        li:nth-child(3) {
+            flex: 4;
+        }
+    
+        li:nth-child(4) {
+            flex: 2;
+        }
+    </style>
+    
+</html>
