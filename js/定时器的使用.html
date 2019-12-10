@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="a" id="a"></div>
+    <div class="b" id="b"></div>
+</body>
+<script>
+ var timer = null;
+ var a = document.getElementById('a')
+ var b = document.getElementById('b')
+ a.addEventListener("mouseenter",()=>{
+     b.style.display='block'
+ })
+a.addEventListener("mouseleave",()=>{
+    timer = setTimeout(()=>{
+        b.style.display='none'
+    },300)
+    b.addEventListener("mouseenter",()=>{
+         b.style.display='block'
+        clearTimeout(timer)})
+})
+b.addEventListener("mouseleave",()=>{
+    b.style.display='none'
+})
+ 
+
+
+</script>
+<style>
+.a{
+    height: 50px;
+    width: 200px;
+    background-color: red;
+}
+.b{
+    margin-top: 20px;
+    display: none;
+    height: 100px;
+    width: 500px;
+    background-color: yellow;
+}
+</style>
+</html>

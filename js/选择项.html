@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="a">
+    <input type="button" value="b">
+    <input type="button" value="c">
+    <input type="button" value="d">
+    <div display='none'>aaa</div>
+    <div>bbb</div>
+    <div>ccc</div>
+    <div>ddd</div>
+    <script>
+    var div = document.getElementsByTagName('div')
+    var input = document.getElementsByTagName('input')
+    for(let i = 0;i<input.length;i++)
+    {
+        input[i].onclick=function(){
+            for(let j=0;j<div.length;j++)
+            {
+                div[j].style.display='none'
+                input[j].className=''
+            }
+            div[i].style.display='block'
+            input[i].className='active'
+        }
+    }
+    </script>
+</body>
+<style>
+    div{
+        display: none;
+    }
+    .active{
+        background-color: red;
+    }
+</style>
+</html>
