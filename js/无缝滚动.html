@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <button onclick="leftMove()">向左</button> <button onclick="rightMove()">向右</button>
+        <div id="a">
+            <ul>
+                <li><img src="./img/genu.jpg" alt=""></li>
+                <li><img src="./img/govinda.jpg" alt=""></li>
+                <li><img src="./img/hritik.jpg" alt=""></li>
+                <li><img src="./img/pawandeep.jpg" alt=""></li>
+                </ul>
+        </div>
+        <script>
+            var box = document.getElementById('box').getElementsByTagName('ul')[0]
+            var speed;
+            var timer;
+            box.innerHTML +=box.innerHTML;
+            function leftMove() {
+                clearInterval(timer)
+                speed = -2;
+                timer = setInterval(() => {
+                    box.style.left = box.offsetLeft + speed + 'px';
+                    if (box.offsetLeft == -512) {
+                        box.style.left = 0
+                    }
+                }, 30);
+
+            }
+            function rightMove() {
+                clearInterval(timer)
+                speed = 2;
+                timer = setInterval(() => {
+                    box.style.left = box.offsetLeft + speed + 'px';
+                    if (box.offsetLeft == 2) {
+                        box.style.left = '-512px'
+                        console.log(box.style.left)
+                    }
+                }, 30);
+            }
+            box.addEventListener("mouseenter",()=>{
+                stop()
+            })
+            box.addEventListener("mouseleave",()=>{
+                start()
+            })
+            function stop(){
+                clearInterval(timer)
+            }
+            function start(){
+                (speed==-2)?leftMove():rightMove()
+            }
+        </script>
+</body>
+<style>
+    .box {
+        width: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    #a {
+        width: 512px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        height: 132px;
+    }
+
+    #a ul {
+        width: 100%;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+    }
+</style>
+
+</html>
