@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table id="tab" border="1" width="500">
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>d</td>
+                <td>e</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>g</td>
+                <td>h</td>
+                <td>i</td>
+            </tr>
+            <tr>
+                <td>j</td>
+                <td>k</td>
+                <td>l</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var oTab = document.getElementById('tab')
+        oTab.tBodies[0].rows[0].style.backgroundColor = 'red';
+    </script>
+</body>
+
+</html>

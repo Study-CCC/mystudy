@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul1">
+        <li>sda</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var nodes = document.getElementById('ul1')
+        //console.log(nodes.childNodes.length)  //7,存在文本节点
+        //nodes.childNodes[0].style.background = 'red'//文本节点不存在style,nodes.childNodes[0].style会报错
+        /*for(let i=0;i<nodes.childNodes.length;i++)
+        {
+            console.log(nodes.childNodes[i].nodeType)   //3是文本节点,1是tag节点 
+        }*/
+        //console.log(nodes.children.length)    //chidren返回子节点不包括文本节点
+        // console.log(nodes.parentNode)   //返回父节点
+        // firstChild 在高版本浏览器中会获取的文本节点,firstElementChild在低版本浏览器中会报错
+        //解决办法
+        if (nodes.firstElementChild) { nodes.firstElementChild.style.backgroundColor = 'red' }
+        else {
+            nodes.firstChild.backgroundColor = 'red'
+        }
+
+        /* DOM 方式操作元素属性
+            获取： getAttribute(名称)
+            设置： setAttribute(名称,值)
+            删除： removeAttribute(名称)
+            */                          
+    </script>
+</body>
+
+</html>

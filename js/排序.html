@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="aSort()">排序</button>
+    <table width='500' border="1" id="tab">
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>姓名</td>
+                <td>年龄</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>张三</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>Blue</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>sIze</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>孙六</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    function aSort(){
+        var arr = [];
+        var otab = document.getElementById("tab").tBodies[0];
+        for(let i =1;i<otab.rows.length;i++){
+            arr.push(otab.rows[i])
+        }
+        arr.sort(function(a,b){
+            var num1 = a.cells[0].innerText
+            var num2 = b.cells[0].innerText
+            return num1-num2
+        })
+    }
+</script>
+</html>

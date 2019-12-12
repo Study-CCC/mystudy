@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="word"><input type="button" value="搜索" onclick="search()">
+    <table id="tab" border="1" width="500">
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>姓名</td>
+                <td>年龄</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Blue</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>sIze</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>孙六</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var otab = document.getElementById('tab')
+        var otext = document.getElementById('word')
+        function search() {
+            var word = otext.value
+            for (let i = 0; i < otab.tBodies[0].rows.length; i++) {
+                for (let j = 0; j < otab.tBodies[0].rows[i].cells.length; j++) {
+                    //模糊搜索
+                    if (otab.tBodies[0].rows[i].cells[j].innerText.search(word) != -1) {
+                        otab.tBodies[0].rows[i].cells[j].parentNode.style.backgroundColor = 'red'
+                    }
+                    //忽略大小写
+                    if (otab.tBodies[0].rows[i].cells[j].innerText.toLowerCase()==word.toLowerCase()) {
+                        otab.tBodies[0].rows[i].cells[j].parentNode.style.backgroundColor = 'red'
+                    }
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

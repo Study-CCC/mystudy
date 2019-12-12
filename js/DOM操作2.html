@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+            <input type="button" value="创建" onclick="create()">
+        <ul>
+            <li><a href="javascript:;">删除</a></li>
+            <li><a href="javascript:;">删除</a></li>
+            <li><a href="javascript:;">删除</a></li>
+            <li><a href="javascript:;">删除</a></li>
+        </ul>
+    </div>
+    <script>
+        var a = 0;
+        var oul = document.getElementsByTagName('ul')[0]
+        var oli = document.createElement('li')
+        var li = document.getElementsByTagName('li')
+        var oA = document.getElementsByTagName('a')
+        for(let i = 0;i<oA.length;i++){
+            oA[i].onclick=function(){
+                oul.removeChild(this.parentNode)
+            }
+        }
+    function create(){
+       
+        oli.innerText = a;
+        a++;
+        //oul.appendChild(oli)  // 添加的节点在最下面
+        //oul.insertBefore(oli,li[0])  //父节点.insertBefore(添加节点,插入哪个结点前),若ul下不存在li，则ie低版本浏览器会报错
+        // 解决方法
+        if(li.length>0)
+        {
+            oul.insertBefore(oli,li[0])
+        }else{
+            oul.appendChild(oli)
+        }
+    }
+    </script>
+</body>
+</html>
