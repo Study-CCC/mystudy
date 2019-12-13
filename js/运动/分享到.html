@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    #box {
+        height: 300px;
+        width: 60px;
+        background-color: red;
+        position: absolute;
+        left: -60px;
+    }
+
+    #box1 {
+        height: 60px;
+        width: 30px;
+        background-color: green;
+        position: absolute;
+        left: 0;
+        top: 50px;
+    }
+</style>
+
+<body>
+    <div id="bigBox">
+        <div id="box"></div>
+        <div id="box1"></div>
+    </div>
+    <script>
+        var box = document.getElementById('box');
+        var box1 = document.getElementById('box1');
+        var timer;
+        var speed;
+        box1.addEventListener('mouseenter', () => {
+            clearInterval(timer);
+            timer = setInterval(() => {
+                speed = - box.offsetLeft / 10
+                box.style.left = box.offsetLeft + speed + 'px'
+                box1.style.left = box1.offsetLeft + speed + 'px'
+            }, 30)
+        })
+    </script>
+</body>
+
+</html>
