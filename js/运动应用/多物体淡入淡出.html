@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        height: 300px;
+        width: 300px;
+        opacity: 0.3;
+        background-color: red;
+        float: left;
+        margin-right: 50px;
+    }
+</style>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        var divs = document.getElementsByTagName('div');
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].opacity = 30;
+            divs[i].timer = null;
+            divs[i].addEventListener("mouseenter", function () {
+                starMove(this, 100)
+            })
+            divs[i].addEventListener("mouseleave", function () {
+                starMove(this, 30)
+            })
+        }
+        function starMove(obj, opacity) {
+            clearInterval(obj.timer)
+            console.log(obj.opacity)
+            obj.timer = setInterval(() => {
+                obj.opacity += (opacity - obj.opacity)/10
+                obj.opacity=(opacity - obj.opacity)>0?Math.ceil(obj.opacity):Math.floor(obj.opacity)
+                   obj.style.opacity = obj.opacity/100
+            }, 30)
+        }
+    </script>
+
+</body>
+
+</html>
