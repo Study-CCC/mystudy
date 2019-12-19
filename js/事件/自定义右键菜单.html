@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+div{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    position: absolute;
+    display: none;
+}
+</style>
+<body>
+    <div></div>
+    <script>
+        // document.oncontextmenu=function(event){
+        //     var div = document.getElementsByTagName('div')[0]
+        // div.display='block'
+        // div.style.left=event.clientX+'px'
+        // div.style.top=event.clientY+'px'
+        // return false
+        // }
+        document.addEventListener("contextmenu",(event)=>{
+        var div = document.getElementsByTagName('div')[0]
+        div.style.display='block'
+        div.style.left=event.clientX+'px'
+        div.style.top=event.clientY+'px'
+        // return false//用addEventListener时没用
+        event.preventDefault()
+    })
+    document.addEventListener('click',()=>{
+        var div = document.getElementsByTagName('div')[0]
+        div.style.display='none'
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../运动应用/move.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bigBox">
+        <div class="headBox">
+            <div class="leftBox"><img src="../img/arrowleft.png" alt=""></div>
+            <div class="rightBox"><img src="../img/arrowright.png" alt=""></div>
+            <ul>
+                <li><img src="../img/genu.jpg"></li>
+                <li><img src="../img/govinda.jpg"></li>
+                <li><img src="../img/hritik.jpg"></li>
+                <li><img src="../img/pawandeep.jpg"></li>
+                <li><img src="../img/mheadA.png"></li>
+                <li><img src="../img/mheadB.png"></li>
+                <li><img src="../img/wheadA.png"></li>
+                <li><img src="../img/wheadB.png"></li>
+            </ul>
+        </div>
+        <div class="footBox">
+            <ul id="footBoxUl">
+                <li><img src="../img/genu.jpg"></li>
+                <li><img src="../img/govinda.jpg"></li>
+                <li><img src="../img/hritik.jpg"></li>
+                <li><img src="../img/pawandeep.jpg"></li>
+                <li><img src="../img/mheadA.png"></li>
+                <li><img src="../img/mheadB.png"></li>
+                <li><img src="../img/wheadA.png"></li>
+                <li><img src="../img/wheadB.png"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var headImg =  document.getElementsByClassName('headBox')[0].getElementsByTagName('li')
+        var leftBox = document.getElementsByClassName('leftBox')[0]
+        var leftImg = leftBox.getElementsByTagName('img')[0]
+        var rightBox = document.getElementsByClassName('rightBox')[0]
+        var rightImg = rightBox.getElementsByTagName('img')[0]
+        var footBox = document.getElementsByClassName('footBox')[0]
+        var footImg = document.getElementsByClassName('footBox')[0].getElementsByTagName('img')
+        var index=0;
+        var oldIndex=0;
+        var zIndex=1;
+        leftBox.addEventListener('mouseenter', () => {
+            starMove(leftImg, 'opacity', 100)
+        })
+        rightBox.addEventListener('mouseenter', () => {
+            starMove(rightImg, 'opacity', 100)
+        })
+        leftBox.addEventListener('mouseleave', () => {
+            starMove(leftImg, 'opacity', 0)
+        })
+        rightBox.addEventListener('mouseleave', () => {
+            starMove(rightImg, 'opacity', 0)
+        })
+        for (let i = 0; i < footImg.length; i++) {
+            footImg[i].addEventListener("click", () => {
+                for (let j = 0; j < footImg.length; j++) {
+                    starMove(footImg[j], 'opacity', 50)
+                }
+                if(oldIndex==i)
+                return
+                else
+                {
+                    oldIndex=i
+
+                }
+                starMove(footImg[i], 'opacity', 100)
+            })
+        }
+        leftImg.addEventListener('click',()=>{
+            
+        })
+        rightImg.addEventListener('click',()=>{
+
+        })
+    </script>
+</body>
+
+</html>

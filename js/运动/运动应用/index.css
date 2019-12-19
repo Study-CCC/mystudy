@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.leftBox{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 111;
+}
+.rightBox{
+    width: 50%;
+    height: 100%;
+    top: -400px;
+    right: -300px;
+    position: relative;
+    z-index: 111;
+}
+.headBox{
+    height: 400px;
+    width: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.headBox ul{
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+.headBox ul img{
+    width: 600px;
+    height: 400px;
+}
+.footBox{
+    width: 600px;
+    height: 150px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.footBox ul{
+    display: flex;
+    list-style: none;
+    position: absolute;
+    left: 0;
+}
+.footBox img{
+    height: 150px;
+    width: 150px;
+    float: left;
+    opacity: 0.5;
+}
+.rightBox img,.leftBox img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    opacity: 0;
+}
+.rightBox img{
+    right: 0;
+}

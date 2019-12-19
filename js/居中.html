@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+
+<body>
+    <style type="text/css">
+        .div1 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000000;
+        }
+
+        .div2 {
+            position: absolute;
+            margin: auto;   /*auto的作用是：自动填充剩余空间,在垂直方向上,块级元素不会自动扩充空间*/
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            background-color: green;
+        }
+    </style>
+
+    <div class="div1">
+        <div class="div2">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

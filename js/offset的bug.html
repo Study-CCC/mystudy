@@ -11,6 +11,9 @@ div{
     width: 400px;
     height: 400px;
     background-color: red;
+    border: 2px solid rgb(240, 217, 217);
+    position: absolute;
+    left: 10px;
 }
 </style>
 <body>
@@ -18,7 +21,11 @@ div{
     </div>
     <script>
         var div = document.getElementsByTagName('div')[0]
-        console.log(div.style.width)  // 只能获取行间样式
+        var speed=1;
+        // console.log(div.style.width)  // 只能获取行间样式
+        var timer = setInterval(()=>{
+            div.style.width =div.offsetWidth-1+'px'   // offsetwidth获取的是width+borde*2
+        },30)
     </script>
 </body>
 </html>

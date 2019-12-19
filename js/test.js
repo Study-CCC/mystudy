@@ -4,4 +4,4 @@ var str = "abc"
 var obj = {}
 var undef = undefined
 var nul = null
-console.log(obj.valueOf())
+console.log(str.valueOf())
