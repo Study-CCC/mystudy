@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #content div {
+        display: none;
+    }
+
+    .active {
+        background-color: yellow;
+        height: 200px;
+        width: 200px;
+    }
+</style>
+
+<body>
+    <div id="head"><input type="button" value="aaa"><input type="button" value="bbb"><input type="button" value="ccc">
+    </div>
+    <div id="content">
+        <div style="display:block" class="active">aaa</div>
+        <div>bbb</div>
+        <div>ccc</div>
+    </div>
+    <script>
+        var oBtn = document.getElementById('head').getElementsByTagName('input')
+        var content = document.getElementById('content').getElementsByTagName('div')
+        for (let i = 0; i <= oBtn.length; i++) {
+            oBtn[i].index = i;
+            oBtn[i].addEventListener("click", () => {
+                for (let i = 0; i < content.length; i++) {
+                    content[i].className = ''
+                    content[i].style.display = 'none'
+                }
+                content[i].style.display = 'block'
+                content[i].className = 'active'
+            })
+        }
+    </script>
+</body>
+
+</html>
