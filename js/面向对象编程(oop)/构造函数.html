@@ -8,20 +8,28 @@
 </head>
 <body>
     <script>
+        // 学习链接https://blog.csdn.net/cc18868876837/article/details/81211729
         // Person的prototype跟per的__proto__是相等的，指向同一个对象
     function Person(name,age,gender){
         this.name=name
         this.age=age
         this.gender=gender
     }   
+    function fn(){
+
+    }
+    var fn1 = new fn()
     Person.prototype.fun=function(){
         alert('大家好，我叫'+ this.name)
     }  
     var per = new Person('c',20,'man')
     per.__proto__.funb=function(){
-        console.log(this.name)
+        console.log('this is '+this.name)
     }
-    // console.log(per1.__proto__==Person.prototype)  
+    var per1 = new Person('a',20,'woman')  //Person构造出来的实例都可以访问per.__proto__中创建的方法
+    // per1.funb()
+    console.log(fn1.constructor===fn)   // fn1本身不存在constructor，是从fn1下的__proto__中找到的
+    // console.log(per.__proto__==Person.prototype)  
     </script>
 </body>
 </html>
