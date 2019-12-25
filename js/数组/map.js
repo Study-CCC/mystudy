@@ -2,6 +2,7 @@ let arr = [12,4,3]
 let result;
 // map 映射
 result = arr.map(item=>item>5?'优秀':'及格')
+console.log(result)
 // clear
 //     从映射中移除所有元素。
 // delete

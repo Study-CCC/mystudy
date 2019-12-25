@@ -19,7 +19,7 @@
 
     }
     var fn1 = new fn()
-    Person.prototype.fun=function(){
+    Person.prototype.fun=function(){        // 方法挂原型链上，防止每次创建新对象都要为方法开创新空间
         alert('大家好，我叫'+ this.name)
     }  
     var per = new Person('c',20,'man')
@@ -27,7 +27,7 @@
         console.log('this is '+this.name)
     }
     var per1 = new Person('a',20,'woman')  //Person构造出来的实例都可以访问per.__proto__中创建的方法
-    // per1.funb()
+    // per1.funb()o
     console.log(fn1.constructor===fn)   // fn1本身不存在constructor，是从fn1下的__proto__中找到的
     // console.log(per.__proto__==Person.prototype)  
     </script>

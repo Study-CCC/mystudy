@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //https://www.jianshu.com/p/86267fab4878
+        class Person {//定义了一个名字为Person的类
+            constructor(name, age) {//constructor是一个构造方法，用来接收参数
+                this.name = name;//this代表的是实例对象
+                this.age = age;
+            }
+            say() {//这是一个类的方法，注意千万不要加上function
+                return "我的名字叫" + this.name + "今年" + this.age + "岁了";
+            }
+        }
+        var obj = new Person("laotie", 88);
+        console.log(typeof Person);    //类实质上就是一个函数。类自身指向的就是构造函数
+        console.log(Person===Person.prototype.constructor);
+        </script>
+</body>
+
+</html>

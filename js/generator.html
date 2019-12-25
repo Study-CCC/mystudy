@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Generator函数是ES6提供的一种异步编程解决方案
+        //我认为它解决异步编程的两大问题  1.回调地狱 2.异步流控
+        //https://blog.csdn.net/tcy83/article/details/80427195
+        /* function *a(){
+               let a=10;
+               console.log(a)
+               yield;
+               console.log("Aaa")
+           }
+           var o=a()
+           // console.log(o.next())
+           o.next()
+           o.next()*/
+
+
+        /*function *b(){
+            let a=10;
+            console.log(a)
+            yield "hello"
+            console.log('bbb')
+        }
+        var o1 = b()
+        console.log(o1.next().value)
+        o1.next()*/
+
+        function* c(x, y) {     // generator实则将c分成了3个函数，
+            console.log(1)         //function c1(){console.log(1); let z}   
+            let z = yield x + y;
+            console.log(z)
+            let result = yield z * x;
+            console.log(result)
+        }
+        var g = c(5, 6);
+        /* g.next()   //{value: 11, done: false}
+         g.next()   //{value: NaN, done: false}
+         g.next()*/
+        /* g.next()    //第一个next无论传什么都没有用
+         g.next(11)  // 第二个next的参数传递给第一个yield,即let z = 11
+         g.next()*/
+
+       /* //对于迭代器(Iterator)接口，还有一个return()方法，执行return()方法后就返回done:true，Generator 函数遍历终止，后面的yield 3不会再执行了
+        //与next()方法一样，return()也可以带参数。
+        function* gen(x, y) {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+        var g = gen();
+        g.next();//{value: 1, done: false}
+        g.next();//{value: 2, done: false}
+        g.return();//{value: undefined, done: true}
+        //g.return(3);//{value: 3, done: true}
+        g.next();//{value: undefined, done: true}*/
+
+    </script>
+</body>
+
+</html>
