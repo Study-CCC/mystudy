@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 每个symbol都是不一样的
+        var sym = Symbol(1)
+        var sym1 = Symbol(1)
+        console.log(typeof sym);
+        console.log(sym == sym1)
+        // symbol转不了数据
+        //   Number(sym)  //报错
+        //可以转为布尔值
+        // console.log(!sym)
+
+        // 使用Symbol.for()参数相同,值就相同
+        let a = Symbol.for(1)
+        let b = Symbol.for(1)
+        console.log(a)
+        console.log(a == b)
+
+        // 获取Symbol的值
+        console.log(parseInt(Symbol.keyFor(a)) + parseInt(Symbol.keyFor(b)))
+
+        //1. 唯一Symbol，常用于为对象添加新属性，避免覆盖
+        var o = {
+            name: 'gcc',
+        }
+        let s1 = Symbol('s1')
+        o[s1] = 's1val'
+        //常规遍历不能得到Symbol属性名
+        for (let tmp in o)
+            console.log(o[tmp])
+        //Object.getOwnPropertySymbol可以得到所有Symbol属性名，弊端是不能获取非Symbol属性名
+        let oSymbolNames = Object.getOwnPropertySymbols(o)
+        console.log(oSymbolNames)
+        //Reflect.ownKeys能获取所有属性名
+        let oAllNames = Reflect.ownKeys(o)
+        console.log(oAllNames)
+
+    </script>
+</body>
+
+</html>
