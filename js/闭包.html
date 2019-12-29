@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 闭包(closure)就是一个作用域有权访问另一个函数作用域中变量的函数
+// 闭包的主要作用:1. 可以在函数的外部访问到函数内部的局部变量。 
+//               2. 让这些变量始终保存在内存中，不会随着函数的结束而自动销毁。
+// 由于闭包会携带包含它的函数的作用域，因为会比其他函数占用更多内容，过度使用闭包，会导致内存占用过多。
+// 闭包用途：https://blog.csdn.net/sunlylorn/article/details/6534610
+function fn(){
+    var num=10;
+    return function(){
+        console.log(num);
+    }
+}
+var f = fn()
+// f()
+
+// 坑点1： 引用的变量可能发生变化
+function outer() {
+    var result = [];
+    for (var i = 0; i<10; i++){
+      result[i]= function () {
+          console.info(i)
+      }
+   }
+   return result
+}
+outer()
+// 随着循环的结束，i已经变成10了，所以执行每个闭包函数，结果打印10， 10， ..., 10
+// 解决方法：
+function outer1(){
+    var result = [];
+    for(var i =0;i<10;i++)
+    {
+        result[i]=(function(num){
+            return function(){
+                console.log(num)        // 此时访问的num，是上层函数执行环境的num，数组有10个函数对象，每个对象的执行环境下的number都不一样
+            }
+        })(i)
+    }
+    return result
+}
+console.log(outer())
+        </script>
+</body>
+</html>

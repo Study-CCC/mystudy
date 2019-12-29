@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 链接：https://blog.csdn.net/qq_39207948/article/details/81067482
+        // 1.浅拷贝： 将原对象或原数组的引用直接赋给新对象，新数组，新对象／数组只是原对象的一个引用
+        // 2.深拷贝： 创建一个新的对象和数组，将原对象的各项属性的“值”（数组的所有元素）拷贝过来，是“值”而不是“引用”
+        // 深拷贝方法1：JSON.parse(JSON.stringify(XXXX))
+        var array = [
+            { number: 1 },
+            { number: 2 },
+            { number: 3 }
+        ];
+        var copyArray = JSON.parse(JSON.stringify(array))
+        copyArray[0].number = 100;
+        console.log(array); //  [{number: 1}, { number: 2 }, { number: 3 }]
+        console.log(copyArray); // [{number: 100}, { number: 2 }, { number: 3 }]
+
+        // 深拷贝方法2： 手写递归
+        var obj = {
+            a:1,
+            b:2,
+            c:{
+                d:3,
+                e:4
+            }
+        }
+        var obj1={};
+        function deepCopy(newobj,oldobj){
+            for(let i in oldobj){
+                var item = oldobj[i]
+                if(item instanceof Array){
+                    newobj[i]=[]
+                    deepCopy(newobj[i],item)
+                }else if(item instanceof Object){
+                    newobj[i]={}
+                    deepCopy(newobj[i],item)
+                }else{
+                    newobj[i]=oldobj[i]
+                } 
+            }
+        }
+        deepCopy(obj1,obj)
+        obj1.c.e=199;
+        console.log(obj1)
+        console.log(obj);
+    </script>
+</body>
+
+</html>
