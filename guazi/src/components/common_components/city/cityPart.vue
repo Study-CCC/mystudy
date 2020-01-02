@@ -65,8 +65,8 @@ export default {
   ,
   methods:{
     data(){
-      console.log(this.title)
-      console.log(this.cityName)
+      // console.log(this.title)
+      // console.log(this.cityName)
     }
   }
 };

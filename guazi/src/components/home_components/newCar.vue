@@ -101,6 +101,8 @@ export default {
 </script>
 <style lang='' scoped>
 .index-channel-operate{
+  position: relative;
+  top: -70px;
     padding-bottom: 52px;
 }
 .w1200 {

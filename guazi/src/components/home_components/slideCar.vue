@@ -21,8 +21,8 @@
         <li v-for="(item,index) in item" :key="index">
           <a href="#">
             <img :src="item.caritemImg" alt />
-            <span>{{item.caritemName}}</span>
-            <span>{{item.caritemPrice}}</span>
+            <span class="carName">{{item.caritemName}}</span>
+            <span class="price">{{item.caritemPrice}}</span>
           </a>
         </li>
       </ul>
@@ -62,7 +62,6 @@ export default {
         left.classList.remove("left-active");
       } else {
         var li = document.querySelector(".carList").getElementsByTagName("li");
-        left.classList.add("left-active");
         // console.log(leftIcon.classList)
         for (let i = 0; i < li.length; i++) {
           li[i].style.transform = `translateX(${this.distance}px)`;
@@ -70,36 +69,54 @@ export default {
       }
     },
     slideRight() {
-      this.distance = this.distance - 196;
       var li = document.querySelector(".carList").getElementsByTagName("li");
       var icon = document.getElementsByClassName("right-icon");
-      console.log(this.group.length)
-      if((this.group.length-6)*196+this.distance>=0)
-      {console.log(111)
+      const len = this.item.length;
+      this.distance = this.distance - 196;
+      // console.log(len)
+      if ((len - 6) * 196 + this.distance >= 0) {
+        console.log(11);
+        this.$refs.left.classList.add("left-active");
+        this.$refs.right.classList.add("right-active");
         for (let i = 0; i < li.length; i++) {
-        li[i].style.transform = `translateX(${this.distance}px)`;
-        // console.log(li[i])
-      }}
-      else{
-        this.distance = -(this.group.length)*196;
+          li[i].style.transform = `translateX(${this.distance}px)`;
+        }
+      } else {
+        this.$refs.right.classList.remove("right-active");
+        this.distance = -(len - 6) * 196;
       }
     },
     styleAdd(a = document.querySelectorAll(".group"), b = 0) {
       // console.log(a.childNodes[0])
       this.getData(`title${b + 1}`);
+      this.change = `title${b + 1}`;
       // 给标题图片添加三角形
       a.childNodes[2].style.backgroundImage = `url(${this.group[b].icon})`;
       // 给hover的图片添加url
-      if (this.oldindex == b) {a.childNodes[0].src = `${this.group[b].hoverImg}`;
-          a.childNodes[2].style.display = "none";
-          }
-      else {
-        document.querySelectorAll(".group")[this.oldindex].childNodes[0].src = `${this.group[this.oldindex].img}`;
-        document.querySelectorAll(".group")[this.oldindex].childNodes[2].style.display = "none";
+      if (this.oldindex == b) {
+        a.childNodes[0].src = `${this.group[b].hoverImg}`;
+        a.childNodes[2].style.display = "none";
+      } else {
+        document.querySelectorAll(".group")[
+          this.oldindex
+        ].childNodes[0].src = `${this.group[this.oldindex].img}`;
+        document.querySelectorAll(".group")[
+          this.oldindex
+        ].childNodes[2].style.display = "none";
         a.childNodes[0].src = `${this.group[b].hoverImg}`;
         a.childNodes[2].style.display = `block`;
         // console.log(a.childNodes[2].style)
-        // console.log(a.getElementsByTagName("span"))
+        // console.log(document.getElementsByClassName('price'))
+        for (
+          let i = 0;
+          i < document.getElementsByClassName("price").length;
+          i++
+        ) {
+          document
+            .getElementsByClassName("price")
+            [i].classList.add(`style${b + 1}`);
+        }
+        // a.getElementsByTagName("span")[0].classList.add(`style${b}`)
       }
       this.oldindex = b;
     }
@@ -114,9 +131,10 @@ export default {
 </script>
 <style lang='' scoped>
 .slideCar {
+  position: relative;
+  top: -50px;
   width: 1200px;
-  height: 225px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 .carGroup {
   display: flex;
@@ -190,5 +208,34 @@ export default {
 .right-active:hover {
   background: url("../../assets/img/right-iconHover.png") no-repeat;
   background-size: 100% 100%;
+}
+.carName {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  color: #181818;
+  margin-top: 18px;
+  line-height: 14px;
+  text-align: center;
+}
+.price {
+  font-size: 14px;
+  color: #3cb46d;
+  line-height: 14px;
+  margin-top: 10px;
+  text-align: center;
+    display: block;
+}
+.style1 {
+  color: #3cb46d;
+}
+.style2 {
+  color: #ffa000;
+}
+.style3 {
+  color: #ff3f00;
+}
+.style4 {
+  color: #25b29d;
 }
 </style>

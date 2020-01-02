@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数不同的调用方式决定this的指向不同
+        // 1.普通函数
+        function fn(){
+            console.log(this)
+        }
+        // fn()
+        // 2. 对象的方法
+        var o ={
+            age: 10,
+            say: function(){
+                console.log(this.age)   //指向原对象
+            },
+            speak:()=>{
+                console.log(this.age)   //指向上一级
+            }
+        }
+        // o.say();
+        // o.speak()
+        // 3. 构造函数 this指向构造函数的实例对象
+        function Star(){
+        }
+        Star.prototype.say=function(){  //原型链上的this也指向实例对象
+            console.log(this)
+        }
+        var c = new Star()
+
+        // console.log(c)
+    </script>
+</body>
+
+</html>

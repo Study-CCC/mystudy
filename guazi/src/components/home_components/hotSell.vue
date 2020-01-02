@@ -68,13 +68,14 @@ export default {
       event.style.color = "#000";
       if(this.index !== this.oldindex)
       document.querySelector(".index-carlist").childNodes[this.oldindex].style.color = "#999"
-      console.log( document.querySelector(".index-carlist").childNodes[this.oldindex])
+      // console.log( document.querySelector(".index-carlist").childNodes[this.oldindex])
     }
   }
 };
 </script>
 <style lang='' scoped>
 .index-carlist {
+
   list-style: none;
   width: 1200px;
   padding-top: 30px;
@@ -117,11 +118,14 @@ export default {
   background: #fff;
 }
 .hotSell {
+    position: relative;
+  top: -85px;
   font: 12px/1.5 PingFang SC, Microsoft YaHei, arial, helvetica, sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
+  background-color: #f5f5f7;
 }
 .title {
   font-size: 28px;

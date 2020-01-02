@@ -14,6 +14,26 @@ Vue.prototype.changeType = (arr) => {
   result.shift();
   return result
 }
+// Vue.prototype.hoverBtn = (obj,flag,childrenDiv)=>{
+//   obj.addEventListener("mouseenter",()=>{
+//     flag = true;
+//     console.log(flag)
+//   })
+//    obj.addEventListener("mouseleave",()=>{
+//      console.log(1234)
+//     obj.timer=null;
+//     obj.timer=setTimeout(()=>{
+//       this.flag = false
+//     },300)
+//      childrenDiv.addEventListener("mouseenter",()=>{
+//       this.flag = true;
+//       clearTimeout(obj.timer)
+//     })
+//      childrenDiv.addEventListener("mouseleave",()=>{
+//       this.flag=false
+//     })
+//   })
+// }
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

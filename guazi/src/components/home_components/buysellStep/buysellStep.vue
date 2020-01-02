@@ -5,6 +5,7 @@
         <em>|</em>
         <span class="js-sellProcedure" ref="sale_car">卖车流程</span>
     </div>
+    <stepSlide></stepSlide>
     <div class="slide-mask"></div>
     <div class="slide-area"></div>
   </div>
@@ -15,12 +16,16 @@ import stepSlide from './stepSlide'
 export default {
   data() {
     return {};
+  },
+  components:{
+    stepSlide
   }
 };
 </script>
 <style lang='' scoped>
 .index-buysell-step {
     position: relative;
+    top: -50px;
     font-size: 14px;
     z-index: 1;
     height: 431.5px;

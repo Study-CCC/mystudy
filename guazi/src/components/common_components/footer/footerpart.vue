@@ -9,19 +9,19 @@
 <script>
 export default {
   name: "",
-  props: ['linktit', 'linkcar'],
+  props: ["linktit", "linkcar"],
   data() {
     return {
-    //   linktit: "热门品牌：",
-    //   linkcar:
-    //     "|南昌二手东风小康|南昌二手大众|南昌二手本田|南昌二手丰田|南昌二手日产|南昌二手奔驰|南昌二手别克|南昌二手福特|南昌二手现代|南昌二手奥迪|南昌二手宝马|南昌二手起亚|南昌二手马自达|南昌二手雪佛兰|南昌二手哈弗|南昌二手吉利|南昌二手长安|南昌二手宝骏|南昌二手斯柯达|南昌二手标致|南昌二手比亚迪|南昌二手传祺|南昌二手荣威|南昌二手凯迪拉克|南昌二手雪铁龙|南昌二手路虎|南昌二手江淮|南昌二手雷克萨斯|南昌二手奇瑞|南昌二手Jeep|南昌二手五菱|南昌二手MINI|南昌二手众泰|南昌二手铃木|南昌二手沃尔沃",
+      //   linktit: "热门品牌：",
+      //   linkcar:
+      //     "|南昌二手东风小康|南昌二手大众|南昌二手本田|南昌二手丰田|南昌二手日产|南昌二手奔驰|南昌二手别克|南昌二手福特|南昌二手现代|南昌二手奥迪|南昌二手宝马|南昌二手起亚|南昌二手马自达|南昌二手雪佛兰|南昌二手哈弗|南昌二手吉利|南昌二手长安|南昌二手宝骏|南昌二手斯柯达|南昌二手标致|南昌二手比亚迪|南昌二手传祺|南昌二手荣威|南昌二手凯迪拉克|南昌二手雪铁龙|南昌二手路虎|南昌二手江淮|南昌二手雷克萨斯|南昌二手奇瑞|南昌二手Jeep|南昌二手五菱|南昌二手MINI|南昌二手众泰|南昌二手铃木|南昌二手沃尔沃",
       result: [],
       flag: false
     };
   },
   created() {
     // this.changeType();
-       this.result = this.changeType(this.linkcar)
+    this.result = this.changeType(this.linkcar);
   },
   mounted() {
     this.$refs.footerpart.style.height = "28px";
@@ -69,10 +69,11 @@ export default {
   position: absolute;
 }
 .linkcar_item {
+  color: #666;
+  line-height: 28px;
   margin-right: 20px;
   display: inline-block;
-  text-decoration: none;
-  color: #666;
+  font-size: 12px;
 }
 .arrow {
   background-repeat: no-repeat;

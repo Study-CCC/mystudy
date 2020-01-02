@@ -1,11 +1,11 @@
 <template>
-  <div class="pop-box pop-login show" id="login1">
+  <div class="pop-box pop-login show" id="login1" v-show="flag">
     <form
       action="#"
       method="post"
       target="guazi_login"
     >
-      <div class="pop-close" id="closeLogin1"></div>
+      <div class="pop-close" id="closeLogin1" @click="close"></div>
       <p class="pop-tit js-logintitle">瓜子二手车直卖网</p>
       <ul class="phone-login">
         <li>
@@ -36,7 +36,16 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods:{
+    close(){
+      this.$emit("changeFlag",false)
+    }
+  },
+  props:[
+    "flag"
+  ]
+};
 </script>
 <style scoped>
 .pop-box {

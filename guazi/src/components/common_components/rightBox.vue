@@ -154,7 +154,7 @@ export default {
       });
     },
     isHidden() {
-      console.log(document.body.clientWidth)
+      // console.log(document.body.clientWidth)
       if (document.body.clientWidth <= 1300) {
         document.getElementsByClassName("toolbar")[0].style.display = "block";
         document.getElementsByClassName("right-nav")[0].style.display = "none";

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        var index = 0;
+        var box = document.getElementsByClassName('box')[0]
+        for (let i = 0; i < 6; i++) {
+            var oli = document.createElement('div')
+            oli.innerText = index++;
+            oli.className = 'child'
+            box.appendChild(oli);
+        }
+
+    </script>
+</body>
+<style>
+    .box {
+        display: flex;
+        width: 1200px;
+        height: 200px;
+        background-color: yellow;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        width: 400px;
+        margin-right: 20px;
+        height: 50px;
+        background-color: red;
+    }
+</style>
+
+</html>

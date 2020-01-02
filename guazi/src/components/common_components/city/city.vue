@@ -1,5 +1,5 @@
 <template>
-  <div class="city-box-parent">
+  <div class="city-box-parent" v-show="flag">
     <div class="class-scroll">
       <div class="city-box all-city">
         <cityBox
@@ -27,6 +27,9 @@ export default {
   components: {
     cityBox
   },
+  props:[
+    "flag"
+  ],
   data() {
     return {
       leftTit: "",
@@ -46,12 +49,8 @@ export default {
       this.$http.get("http://localhost:8080/static/city.json").then(res => {
         this.leftTit = "周边";
         this.leftCity = this.changeType(res.data.surroundingCity);
-        this.rightTit = "全国";
+        this.rightTit = "热门";
         this.rightCity = this.changeType(res.data.hotCity);
-        // console.log(this.greenCity)
-
-        // console.log(res.data.data)
-        // console.log(this.cityName)
         let i = 0;
         for (var item in res.data.data) {
           if (i < 12) {
@@ -66,7 +65,7 @@ export default {
             });
           i++;
         }
-        console.log(this.leftdata);
+        // console.log(this.leftdata);
       });
     }
   }
@@ -74,11 +73,6 @@ export default {
 </script>
 <style lang='' scoped>
 .city-box-parent{
-  font: 12px/1.5 PingFang SC,Microsoft YaHei,arial,helvetica,sans-serif;
-margin: 0;
-padding: 0;
-border: 0;
-outline: 0;
 width: 100%;
 position: absolute;
 top: 55px;
@@ -106,7 +100,6 @@ box-shadow: 0 1px 2px 0 hsla(0,0%,80%,.5);
     padding-bottom: 7.5px;
 }
 .city-box {
-  display: none;
     max-height: 453px;
     overflow-y: scroll;
 }

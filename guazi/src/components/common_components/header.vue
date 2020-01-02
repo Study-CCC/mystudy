@@ -1,7 +1,9 @@
 <template>
-  <div class="header">
+  <div class="all"><div class="header">
+    <Login :flag="flag" @changeFlag="changeFlag"></Login>
+    <City id="abc" :flag="cityFlag"></City>
     <a class="header_icon" title="瓜子二手车"></a>
-    <span class="city">
+    <span @mouseenter="this.cityOpen" @mouseleave="this.cityLeave" class="city">
       南昌
       <i></i>
     </span>
@@ -9,7 +11,7 @@
    
         <div class="login">
       <i class="avatar"></i>
-      <router-link to="">登录</router-link></div>
+      <a @click="open" >登录</a></div>
           <div class="phone">热线电话 400-060-6085</div>
   </div>
    <div class="header_list">
@@ -25,25 +27,66 @@
    
         <router-link to>毛豆新车</router-link>
 </div>
-  </div>
+  </div></div>
 </template>
-<script>
+<script> 
+import Login from './login'
+import City from './city/city'
 export default {
- 
+  data(){
+    return {
+      flag:false,
+      cityFlag:false
+    }
+  },
+
   methods:{
-    
+    open(){
+      this.flag = true
+      // console.log('111')
+    },
+    changeFlag(params){
+      this.flag=false
+    },
+    cityOpen(){
+     this.cityFlag = true
+    //  console.log(cityDiv)
+    },
+    cityLeave(){
+      var cityDiv = document.getElementById('abc')
+      var timer = null;
+      timer=setTimeout(()=>{
+        this.cityFlag = false
+      },300)
+       cityDiv.addEventListener("mouseenter",()=>{
+        this.cityFlag = true;
+        clearTimeout(timer)
+      })
+       cityDiv.addEventListener("mouseleave",()=>{
+        this.cityFlag=false
+      })
+    }
+  },
+  components:{
+    Login,
+    City
   }
 };
 </script>
 
 <style scoped>
+.all{
+  width: 100%;
+}
 .header {
-  min-width: 1200px;
+  width: 1200px;
   position: absolute;
+  margin: 0 auto;
   left: 50%;
   margin-left: -600px;
-  background-color: green;
   color: #fff;
+  /* box-shadow: none; */
+  /* background-color: green; */
 }
 .header_menu{
     padding-left: 200px;
@@ -62,7 +105,8 @@ a {
   color: #fff;
 }
 a:hover,.city:hover{
-  color:#fff; font-weight:bold;
+  color:#fff; 
+  font-weight:bold;
 }
 .header_icon {
     float: left;

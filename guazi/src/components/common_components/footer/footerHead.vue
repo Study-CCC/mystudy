@@ -228,4 +228,9 @@ export default {
   position: relative;
   font-size: 12px;
 }
+.phone-email p {
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
 </style>

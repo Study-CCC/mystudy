@@ -57,7 +57,8 @@
           <img :src="item.buycarBrandImg" alt />
           {{item.buycarBrand}}
         </a>
-        <a href="#">全部品牌</a>
+        <a href="#" @mouseenter="this.open" @mouseleave="this.leave">全部品牌</a>
+        <buySellPart :flag="flag" id="buysell"></buySellPart>
       </div>
       <div class="buycar-brand clearfix">
         <a href="#" v-for="(item,index) in carPrice" :key="index">{{item}}</a>
@@ -87,7 +88,6 @@
           <a href="#" target="_blank">
             <button class="phone-btn-eval">保卖服务</button>
           </a>
-          <!-- https://www.guazi.com/bj/sellAssureIntro -->
         </div>
       </div>
     </div>
@@ -95,6 +95,8 @@
 </template>
 
 <script>
+import buySellPart  from './buySellPart'
+import { log } from 'util';
 export default {
   data() {
     return {
@@ -104,7 +106,8 @@ export default {
       allBrand: [],
       carPrice: [],
       carType: [],
-      result: []
+      result: [],
+      flag:false
     };
   },
   created() {
@@ -114,13 +117,35 @@ export default {
       this.carType = this.changeType(res.data.carType);
     });
   },
-  methods: {}
+  methods: {
+    open(){
+      this.flag = true
+      // console.log('111')
+    },
+    leave(){
+      var cityDiv = document.getElementById('buysell')
+      var timer = null;
+      timer=setTimeout(()=>{
+        this.flag = false
+      },300)
+       cityDiv.addEventListener("mouseenter",()=>{
+        this.flag = true;
+        clearTimeout(timer)
+      })
+       cityDiv.addEventListener("mouseleave",()=>{
+        this.flag=false
+      })
+    }
+  },
+  components:{
+    buySellPart
+  }
 };
 </script>
 <style lang='' scoped>
 .buySell {
   position: relative;
-  top: 242.5px;
+  top:-90px;
   z-index: 3;
   height: 271.5px;
   font-size: 14px;
