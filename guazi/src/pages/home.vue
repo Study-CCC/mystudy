@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ScollHeader v-show="flag"></ScollHeader>
     <Header></Header>
     <div class="index-header"></div>
     <BuySell></BuySell>
@@ -8,13 +9,13 @@
     <newCar></newCar>
     <buySellStep></buySellStep>
     <Problem></Problem>
-    <rightBox></rightBox>
+    <rightBox :flagTop="flag" @scollTop="scollTop"></rightBox>
     <Footer></Footer>
-    <!-- <City></City> -->
   </div>
 </template>
    
 <script>
+import ScollHeader from "@/components/home_components/scollHeader"
 import Header from "@/components/common_components/header";
 import Login from "@/components/common_components/login";
 import Footer from "@/components/common_components/footer/footer";
@@ -29,6 +30,7 @@ import slideCar from "@/components/home_components/slideCar";
 export default {
   name: "index",
   components: {
+    ScollHeader,
     Header,
     Login,
     Footer,
@@ -42,9 +44,30 @@ export default {
     slideCar
   },
   data() {
-    return {};
+    return {
+      flag:false
+    };
+  },
+  mounted(){
+    window.onmousewheel=()=>{
+      this.changeFlag()
+    }
+  },
+methods: {
+  changeFlag(){
+    // console.log(document.documentElement.scrollTop);
+    if(document.documentElement.scrollTop>=200)
+    this.flag=true
+    else this.flag=false
+  },
+  scollTop(){
+    document.documentElement.scrollTop=0
+    this.flag=false
+    // console.log(3333)
   }
+},
 };
+
 </script>
 
 <style>

@@ -12,10 +12,15 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    // {
-    //   path:'/',
-    //   name:'Buy',
-    //   component:wantSell
-    // }
+    {
+      path: '/buy',
+      name:'Buy',
+      component:wantBuy
+    },
+    {
+      path:'/sell',
+      name:'Sell',
+      component:wantSell
+    }
   ]
 })

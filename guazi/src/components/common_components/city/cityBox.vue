@@ -24,6 +24,7 @@ export default {
     return {
     };
   },
+ 
   props:[
    'data',
     "title",

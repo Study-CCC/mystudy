@@ -107,15 +107,15 @@ export default {
         a.childNodes[2].style.display = `block`;
         // console.log(a.childNodes[2].style)
         // console.log(document.getElementsByClassName('price'))
-        for (
-          let i = 0;
-          i < document.getElementsByClassName("price").length;
-          i++
-        ) {
-          document
-            .getElementsByClassName("price")
-            [i].classList.add(`style${b + 1}`);
-        }
+        // for (
+        //   let i = 0;
+        //   i < document.getElementsByClassName("price").length;
+        //   i++
+        // ) {
+        //   document
+        //     .getElementsByClassName("price")
+        //     [i].classList.add(`style${b + 1}`);
+        // }
         // a.getElementsByTagName("span")[0].classList.add(`style${b}`)
       }
       this.oldindex = b;
@@ -226,7 +226,7 @@ export default {
   text-align: center;
     display: block;
 }
-.style1 {
+/* .style1 {
   color: #3cb46d;
 }
 .style2 {
@@ -237,5 +237,5 @@ export default {
 }
 .style4 {
   color: #25b29d;
-}
+} */
 </style>

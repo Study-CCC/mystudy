@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <input type="text" id="a">
     <input type="text" id="b">
     <input id="c" type="button" value="aaa">
     <script>
-    document.getElementById('c').onclick=function(){
-        var a =document.getElementById('a')
-        var b = document.getElementById('b')
-        alert(typeof NaN)
-    }
+        document.getElementById('c').onclick = function () {
+            var a = document.getElementById('a')
+            var b = document.getElementById('b')
+            alert(typeof NaN)
+        }
+        window.onmousewheel  = function () {
+            console.log(document.documentElement.scrollTop);
+        }
     </script>
 </body>
+<style>
+    body {
+        height: 20000px;
+        overflow-y: auto;
+    }
+</style>
+
 </html>

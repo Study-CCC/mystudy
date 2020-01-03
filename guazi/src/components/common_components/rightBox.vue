@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cccbox">
     <a class="toolbar" id="toolbar" href="javascript:;">
       工
       <br />具
@@ -7,6 +7,7 @@
     </a>
     <div class="right-nav">
       <div class="right-box">
+        <i v-show="sellShow" class="icon-sell"></i>
         <div class="fix-icon app">
           <div class="app-bar">
             <span></span>
@@ -98,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="fix-icon backtop"></div>
+        <div v-show="flagTop" @click="top" class="fix-icon backtop"></div>
       </div>
     </div>
   </div>
@@ -110,10 +111,13 @@ export default {
     return {
       a: 1,
       flag: true,
-      width:0
+      width: 0
     };
   },
   methods: {
+    top() {
+      this.$emit("scollTop");
+    },
     addHover(a) {
       a.addEventListener("mouseenter", function(e) {
         a.firstElementChild.style.display = "block";
@@ -124,7 +128,7 @@ export default {
     },
     addStyle() {
       const icons = document.querySelectorAll(".fix-icon");
-      const history = icons[icons.length-2];
+      const history = icons[icons.length - 2];
       // console.log(icons)
       for (let i = 0; i < icons.length - 2; i++) {
         this.addHover(icons[i]);
@@ -134,23 +138,22 @@ export default {
         history.firstElementChild.style.display = "block";
       });
       history.addEventListener("mouseleave", e => {
-       setTimeout(()=>{
-         history.firstElementChild.addEventListener("mouseenter",e=>{
-           this.a = 2
-          //  console.log(2)
-         })
+        setTimeout(() => {
+          history.firstElementChild.addEventListener("mouseenter", e => {
+            this.a = 2;
+            //  console.log(2)
+          });
 
-         history.firstElementChild.addEventListener("mouseleave",e=>{
-           this.a = 3
-           history.classList.remove('historyActive');
-           history.firstElementChild.style.display = 'none'
-         })
-         if(this.a==1)
-         {
-           history.classList.remove('historyActive');
-           history.firstElementChild.style.display = 'none'
-         }
-       },100)
+          history.firstElementChild.addEventListener("mouseleave", e => {
+            this.a = 3;
+            history.classList.remove("historyActive");
+            history.firstElementChild.style.display = "none";
+          });
+          if (this.a == 1) {
+            history.classList.remove("historyActive");
+            history.firstElementChild.style.display = "none";
+          }
+        }, 100);
       });
     },
     isHidden() {
@@ -178,6 +181,10 @@ export default {
             this.flag = !this.flag;
             document.getElementsByClassName("toolbar")[0].style.display =
               "block";
+            console.log(
+              document.getElementsByClassName("toolbar")[0].style.top
+            );
+
             document.getElementsByClassName("right-nav")[0].style.display =
               "none";
             document.getElementsByClassName("toolbar")[0].style.right =
@@ -188,22 +195,38 @@ export default {
           }
         });
     },
-    topBack(){
-      
-    }
+    topBack() {}
   },
+  props: ["flagTop",
+  "sellShow"],
   mounted() {
-    this.isHidden()
+    this.isHidden();
     this.addStyle();
     let _this = this;
-    window.onresize = function () {
-      _this.isHidden()
+    window.onresize = function() {
+      _this.isHidden();
       // console.log('123')
-    }
+    };
   }
 };
 </script>
 <style lang='' scoped>
+.icon-sell {
+  background: url(//cli-sta.guazistatic.com/c2c_web/side-bar@2x.3cde37b723751598f4a9f2d8e95a43f7.png)
+    no-repeat;
+  background-size: 259px 361px;
+  position: absolute;
+  left: -5px;
+  display: block;
+  width: 50px;
+  height: 53px;
+  top: 50px;
+  z-index: 110;
+  background-position: -136px 0;
+}
+.cccbox {
+  z-index: 999;
+}
 .right-nav {
   height: 100%;
   width: 40px;

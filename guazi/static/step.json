@@ -1,46 +1,62 @@
 {
-    "buystep":{
-        "first":{
-            "title":"预约看车",
-            "text":"拨打400-060-6085或在线预约",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/buy-step-order.jpg"
+    "buystep": {
+        "1": {
+            "title": "预约看车",
+            "text": "拨打400-060-6085或在线预约",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/buy-step-order.jpg",
+            "icon": "2px -21px",
+            "iconHover": "2px -57px"
         },
-        "second":{
-            "title":"转人带看",
-            "text":"瓜子将安排售车顾问陪同您看车",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/buy-step-order.jpg"
+        "2": {
+            "title": "转人带看",
+            "text": "瓜子将安排售车顾问陪同您看车",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/buy-step-see.jpg",
+            "icon": "-41px -21px",
+            "iconHover": "-41px -57px"
         },
-        "third":{
-            "title":"签署合同",
-            "text":"卖方、买方与居间人(瓜子)签署二手车买卖及居间服务合同",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/buy-step-contract.jpg"
+        "3": {
+            "title": "签署合同",
+            "text": "卖方、买方与居间人(瓜子)签署二手车买卖及居间服务合同",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/buy-step-contract.jpg",
+            "icon": "-84px -21px",
+            "iconHover": "-84px -57px"
         },
-        "four":{
-            "title":"交易过户",
-            "text":"协助过户，支付车款，好车开回家",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/buy-step-deal.jpg"
+        "4": {
+            "title": "交易过户",
+            "text": "协助过户，支付车款，好车开回家",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/buy-step-deal.jpg",
+            "icon": "-119px -21px",
+            "iconHover": "-119px -57px"
         }
     },
-    "sellstep":{
-        "first":{
-            "title":"在线预约",
-            "text":"检测师免费上门检测",
-            "img":"http://image.guazistatic.com/gz01191107/14/40/3bf621cca400745d75e0286bcb7caf41.jpg"
+    "sellstep": {
+        "1": {
+            "title": "在线预约",
+            "text": "检测师免费上门检测",
+            "img": "http://image.guazistatic.com/gz01191107/14/40/3bf621cca400745d75e0286bcb7caf41.jpg",
+            "icon": "-302px 4px",
+            "iconHover": "-348px 4px"
         },
-        "second":{
-            "title":"全网代售",
-            "text":"海量买家快速售出",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/sell-step-service.jpg"
+        "2": {
+            "title": "全网代售",
+            "text": "海量买家快速售出",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/sell-step-service.jpg",
+            "icon": "-302px -29px",
+            "iconHover":"-348px -29px" 
         },
-        "third":{
-            "title":"用户看车",
-            "text":"快速匹配意向买家",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/sell-step-see.jpg"
+        "3": {
+            "title": "用户看车",
+            "text": "快速匹配意向买家",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/sell-step-see.jpg",
+            "icon": "-302px -64px",
+            "iconHover": "-348px -64px"
         },
-        "four":{
-            "title":"签约过户",
-            "text":"省心省时，全程陪同",
-            "img":"http://sta.guazistatic.com/static/c2c/web/index/sell-step-deal.jpg"
+        "4": {
+            "title": "签约过户",
+            "text": "省心省时，全程陪同",
+            "img": "http://sta.guazistatic.com/static/c2c/web/index/sell-step-deal.jpg",
+            "icon": "-302px -102px",
+            "iconHover": "-348px -102px"
         }
     }
 }
