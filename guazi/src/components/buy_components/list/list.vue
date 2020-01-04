@@ -21,7 +21,7 @@ import listItem from "./listItem"
        getData(){
             this.$http.get("http://localhost:8080/static/wantbuy.json").then(res => {
               this.listItem=res.data.carList
-              console.log(this.listItem);
+              // console.log(this.listItem);
               
           })}
     },

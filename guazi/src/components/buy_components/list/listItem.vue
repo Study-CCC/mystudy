@@ -13,9 +13,18 @@
       <ul>
         <li v-for="(info,index) in carInfo" :key="index">
           <label>{{info.carInitial}}</label>
-          <div class="carItems"><a href v-for="(a,b) in carInfo[index].carItem" :key="b">{{a}}</a></div>
+          <div class="carItems">
+            <a href v-for="(a,b) in carInfo[index].carItem" :key="b">{{a}}</a>
+          </div>
         </li>
       </ul>
+    </div>
+    <div v-show="flagPrice">
+      <input type="text" size="4" maxlength="3" />
+      <span>-</span>
+      <input type="text" size="4" maxlength="3"/>
+      <span>万</span>
+      <input type="button" class="btn" value="确定">
     </div>
   </div>
 </template>
@@ -28,17 +37,20 @@ export default {
       list: "",
       flag: true,
       carInfo: [],
-      flagCon:false
-
+      flagCon: false,
+      flagPrice: false
     };
   },
   created() {
     this.change();
     this.getDate();
-    if(this.title=="品牌")
-    this.flag=true
-    else
-    this.flag=false
+    if (this.title == "品牌") {
+      this.flag = true;
+      this.flagPrice = false;
+    } else if ((this.title == "价格")) {
+      this.flagPrice = true;
+      this.flag = false;
+      }
   },
   methods: {
     change() {
@@ -58,12 +70,14 @@ export default {
       var all = document.getElementById("allItem");
       if (all.innerText.includes("全部")) {
         document.getElementById("itemText").innerText = "收起";
-        document.getElementsByClassName('icon')[0].style.backgroundPosition="-40px -10px"
-        this.flagCon=true
+        document.getElementsByClassName("icon")[0].style.backgroundPosition =
+          "-40px -10px";
+        this.flagCon = true;
       } else {
         document.getElementById("itemText").innerText = "全部";
-        document.getElementsByClassName('icon')[0].style.backgroundPosition="-40px 0px"
-        this.flagCon=false
+        document.getElementsByClassName("icon")[0].style.backgroundPosition =
+          "-40px 0px";
+        this.flagCon = false;
       }
     }
   },
@@ -77,16 +91,27 @@ export default {
   border-bottom: none;
   align-items: center;
   flex-wrap: wrap;
-
 }
-a{
-  text-decoration: none
+a {
+  text-decoration: none;
 }
 .list {
   display: flex;
   height: 20px;
 }
-li{
+.btn{
+  width: 54px;
+    height: 22px;
+    line-height: 18px;
+    font-size: 12px;
+    margin-top: -1px;
+    margin-left: 5px;
+    background: #f6fcf7;
+    color: #22ac38;
+    border: 1px solid #22ac38;
+    cursor: pointer;
+}
+li {
   list-style: none;
 }
 p {
@@ -136,25 +161,29 @@ a:hover,
   background-repeat: no-repeat;
 }
 
-.carContent li{
+.carContent li {
   display: flex;
-   margin-top: 10px;
+  margin-top: 10px;
   width: 380px;
   margin-left: 10px;
 }
-.carContent ul{
-  display:flex;
+.carContent ul {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 500px;
 }
-.carContent label{
+.carContent label {
   color: #22ab38;
   line-height: 24px;
 }
 .carContent li a {
   margin-left: 10px;
   white-space: nowrap;
+  color: #495056;
+  line-height: 24px;
+}
+span{
   color: #495056;
   line-height: 24px;
 }
