@@ -15,22 +15,22 @@
       <ul ref="oul">
         <li>
           <img class="phoneImg" src alt />
-          <span>{{this.stepData[1].title}}</span>
+          <span v-if="stepData[1]">{{stepData[1].title}}</span>
           <i class="icon-step"></i>
         </li>
         <li>
           <img class="phoneImg" src alt />
-          <span>{{this.stepData[2].title}}</span>
+          <span v-if="stepData[2]">{{stepData[2].title}}</span>
           <i class="icon-step"></i>
         </li>
         <li>
           <img class="phoneImg" src alt />
-          <span>{{this.stepData[3].title}}</span>
+          <span v-if="stepData[3]">{{stepData[3].title}}</span>
           <i class="icon-step"></i>
         </li>
         <li>
           <img class="phoneImg" src alt />
-          <span>{{this.stepData[4].title}}</span>
+          <span v-if="stepData[4]">{{stepData[4].title}}</span>
           <i class="icon-step"></i>
         </li>
       </ul>
@@ -58,13 +58,15 @@ export default {
   },
   mounted() {
     this.getInfo("buystep", this.setImg);
+
   },
   methods: {
     getInfo(type = "buystep", fn) {
       this.$http.get("http://localhost:8080/static/step.json").then(res => {
         this.stepData = res.data[type];
-        if (fn) {
-          fn(type);
+      }).then(()=>{
+        if(fn)
+        {fn(type)
         }
       });
     },
@@ -82,36 +84,11 @@ export default {
       var oli = this.$refs.oul.getElementsByTagName("li");
       var oslide = this.$refs.slide.getElementsByTagName("img");
       var all = this.$refs.all;
-      // this.timer = setInterval(() => {
-      //   this.index++;
-      //   if (this.index == 5) this.index = 1;
-      //   for (let i = 0; i < 4; i++)
-      //     phoneImg[i].style.backgroundPosition = this.stepData[i + 1].icon;
-      //   phoneImg[this.index - 1].style.backgroundPosition = this.stepData[
-      //     this.index
-      //   ].iconHover;
-      //   this.showTitle = this.stepData[this.index].title;
-      //   this.showCon = this.stepData[this.index].text;
-      //   oslide[0].src = this.stepData[this.index].img;
-      // }, 1500);
       all.addEventListener("mouseenter", () => {
-        // console.log(11);
         clearInterval(this.timer);
       });
       all.addEventListener("mouseleave", () => {
         clearInterval(this.timer);
-        // this.timer = setInterval(() => {
-        //   this.index++;
-        //   if (this.index == 5) this.index = 1;
-        //   for (let i = 0; i < 4; i++)
-        //     phoneImg[i].style.backgroundPosition = this.stepData[i + 1].icon;
-        //   phoneImg[this.index - 1].style.backgroundPosition = this.stepData[
-        //     this.index
-        //   ].iconHover;
-        //   this.showTitle = this.stepData[this.index].title;
-        //   this.showCon = this.stepData[this.index].text;
-        //   oslide[0].src = this.stepData[this.index].img;
-        // }, 1500);
       });
       for (let i = 0; i < phoneImg.length; i++) {
         phoneImg[i].style.backgroundPosition = this.stepData[i + 1].icon;

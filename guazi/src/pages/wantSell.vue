@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header class="head"></Header>
     <total-header />
     <display-car />
     <bottom-content />
@@ -80,8 +80,5 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
+
 </style>

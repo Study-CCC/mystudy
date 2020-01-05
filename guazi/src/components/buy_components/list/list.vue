@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <listItem v-for="(value,index) in listItem" :key="index" :title="value.title" :carList="value.carList"></listItem>
+    <listItem v-for="(value,index) in listItem" :key="index" :title="value.title" :carList="value.carList" @search="search"></listItem>
     <More></More>
   </div>
 </template>
@@ -11,7 +11,8 @@ import listItem from "./listItem"
   export default {
     data () {
       return {
-         listItem:{}
+         listItem:{},
+
       };
     },
     created(){
@@ -23,7 +24,10 @@ import listItem from "./listItem"
               this.listItem=res.data.carList
               // console.log(this.listItem);
               
-          })}
+          })},
+          search(a,b){
+            this.$emit("search",a,b)
+          }
     },
     components:{
       More,

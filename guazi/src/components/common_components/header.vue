@@ -18,9 +18,9 @@
       <div class="header_list">
         <router-link to="/">首页</router-link>
 
-        <router-link to="/buy">我要买车</router-link>
+        <router-link class="buy" to="/buy">我要买车</router-link>
 
-        <router-link to="/sell">我要卖车</router-link>
+        <router-link class="sell" to="/sell">我要卖车</router-link>
 
         <router-link to>瓜子服务</router-link>
 

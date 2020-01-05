@@ -20,11 +20,11 @@
       </ul>
     </div>
     <div v-show="flagPrice">
-      <input type="text" size="4" maxlength="3" />
+      <input type="text" ref="firstText" size="4" maxlength="3" />
       <span>-</span>
-      <input type="text" size="4" maxlength="3"/>
+      <input type="text" ref="secondText" size="4" maxlength="3" />
       <span>万</span>
-      <input type="button" class="btn" value="确定">
+      <input type="button" @click="search" class="btn" value="确定" />
     </div>
   </div>
 </template>
@@ -44,27 +44,43 @@ export default {
   created() {
     this.change();
     this.getDate();
-    if (this.title == "品牌") {
-      this.flag = true;
-      this.flagPrice = false;
-    } else if ((this.title == "价格")) {
-      this.flagPrice = true;
-      this.flag = false;
-      }
   },
   methods: {
     change() {
       this.list = this.changeType(this.carList);
     },
+    search() {
+      var firstnum = this.$refs.firstText.value;
+      var secondnum = this.$refs.secondText.value
+      if(parseInt(firstnum)>parseInt(secondnum))
+      this.$emit("search",firstnum,secondnum)
+      else
+      this.$emit("search",secondnum,firstnum)
+      
+    },
     getDate() {
-      this.$http.get("http://localhost:8080/static/wantbuy.json").then(res => {
-        res.data.allBrand.forEach(a => {
-          this.carInfo.push({
-            carInitial: a.firstC,
-            carItem: this.changeType(a.carName)
+      this.$http
+        .get("http://localhost:8080/static/wantbuy.json")
+        .then(res => {
+          res.data.allBrand.forEach(a => {
+            this.carInfo.push({
+              carInitial: a.firstC,
+              carItem: this.changeType(a.carName)
+            });
           });
+        })
+        .then(() => {
+          if (this.title == "品牌") {
+            this.flag = true;
+            this.flagPrice = false;
+          } else if (this.title == "价格") {
+            this.flagPrice = true;
+            this.flag = false;
+          } else {
+            this.flagPrice = false;
+            this.flag = false;
+          }
         });
-      });
     },
     show() {
       var all = document.getElementById("allItem");
@@ -99,17 +115,17 @@ a {
   display: flex;
   height: 20px;
 }
-.btn{
+.btn {
   width: 54px;
-    height: 22px;
-    line-height: 18px;
-    font-size: 12px;
-    margin-top: -1px;
-    margin-left: 5px;
-    background: #f6fcf7;
-    color: #22ac38;
-    border: 1px solid #22ac38;
-    cursor: pointer;
+  height: 22px;
+  line-height: 18px;
+  font-size: 12px;
+  margin-top: -1px;
+  margin-left: 5px;
+  background: #f6fcf7;
+  color: #22ac38;
+  border: 1px solid #22ac38;
+  cursor: pointer;
 }
 li {
   list-style: none;
@@ -183,7 +199,7 @@ a:hover,
   color: #495056;
   line-height: 24px;
 }
-span{
+span {
   color: #495056;
   line-height: 24px;
 }

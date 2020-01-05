@@ -5,11 +5,11 @@
       <div class="carInfo">
         <h2>{{item.carName}}</h2>
         <div class="t-i">
-          {{this.year}}
+          {{item.carType.split("|")[0]}}
           <span>|</span>
-          {{this.distance}}
+          {{item.carType.split("|")[1]}}
           <span v-show="this.type">|</span>
-          {{this.type}}
+          {{item.carType.split("|")[2]}}
         </div>
         <div class="t-price" ref="tPrice">
           <p>
@@ -45,6 +45,8 @@ export default {
   },
   methods: {
     changeType() {
+      // console.log(this.item);
+
       this.year = this.item.carType.split("|")[0];
       this.distance = this.item.carType.split("|")[1];
       this.type = this.item.carType.split("|")[2];
@@ -77,7 +79,7 @@ export default {
   },
   mounted() {},
   filters: {}
-}; 
+};
 </script>
 <style lang='' scoped>
 .carItem {
@@ -87,6 +89,7 @@ export default {
   margin-bottom: 19px;
   background: #fff;
 }
+
 .icon-new {
   font-style: normal;
   position: absolute;
@@ -134,6 +137,7 @@ a {
   padding: 0;
   background-color: #fff;
   border: none;
+  overflow: hidden;
 }
 .t-i {
   color: #a5abb2;

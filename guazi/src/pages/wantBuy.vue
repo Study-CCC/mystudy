@@ -1,23 +1,62 @@
 <template>
   <div class="buy">
+    <HeadScoll v-show="flag"></HeadScoll>
     <Header class="head"></Header>
     <div class="header"></div>
     <div class="top-banner-app"></div>
-    <List></List>
-
+    <List @search="search"></List>
+    <CarCon :firstNum="firstNum" :secondNum="secondNum"></CarCon>
+    <Footer></Footer>
+    <rightBox :flagTop="flag" @scollTop="scollTop" :sellShow="sellShow"></rightBox>
   </div>
 </template>
 
 <script>
 import Header from "@/components/common_components/header";
 import List from "@/components/buy_components/list/list";
+import CarCon from "@/components/buy_components/carCon";
+import Footer from "@/components/common_components/footer/footer";
+import HeadScoll from "@/components/buy_components/headScoll";
+import rightBox from "@/components/common_components/rightBox";
 export default {
   data() {
-    return {};
+    return {
+      flag: false,
+      sellShow:true,
+      firstNum:0,
+      secondNum:0
+    };
+  },
+  mounted() {
+    window.onmousewheel = () => {
+      this.changeFlag();
+    };
+  },
+  methods: {
+    changeFlag() {
+      // console.log(document.documentElement.scrollTop);
+      if (document.documentElement.scrollTop >= 200) this.flag = true;
+      else this.flag = false;
+    },
+    search(a,b){
+      this.firstNum=b;
+      this.secondNum=a;
+      
+    },
+    scollTop() {
+      document.documentElement.scrollTop = 0;
+      this.flag = false;
+      // console.log(3333)
+    }
+   
   },
   components: {
     Header,
-    List
+    List,
+    CarCon,
+    Footer,
+    HeadScoll,
+    rightBox
   }
 };
 </script>
@@ -70,6 +109,9 @@ ul {
   color: #22ac38;
   font-weight: normal;
 }
+.head>>>.buy{
+  border-bottom: 2px solid #22ac38;
+}
 .top-banner-app {
   background: url(//cli-sta.guazistatic.com/c2c_web/listhengfu.a9a66368b8d6341993954ec8c4f76628.png)
     no-repeat;
@@ -79,5 +121,4 @@ ul {
   height: 120px;
   margin: 0 auto;
 }
-
 </style>
