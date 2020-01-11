@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Axios from 'axios'
+import VueLazyload from 'vue-lazyload'
 
 // 将axios 挂载到vue 的原型链上,所有vue 实例都可以使用
 Vue.prototype.$http = Axios
@@ -14,6 +15,9 @@ Vue.prototype.changeType = (arr) => {
   result.shift();
   return result
 }
+Vue.use(VueLazyload, {
+  loading: require('./assets/img/pc_default.jpg')// 懒加载使用的图片
+})
 // Vue.prototype.hoverBtn = (obj,flag,childrenDiv)=>{
 //   obj.addEventListener("mouseenter",()=>{
 //     flag = true;

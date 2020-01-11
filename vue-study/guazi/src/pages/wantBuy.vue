@@ -28,9 +28,14 @@ export default {
     };
   },
   mounted() {
-    window.onmousewheel = () => {
-      this.changeFlag();
-    };
+     document.addEventListener(
+      "mousewheel",
+      event => {
+        this.changeFlag()
+      },
+      false
+    );
+
   },
   methods: {
     changeFlag() {

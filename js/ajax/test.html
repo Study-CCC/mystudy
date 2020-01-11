@@ -9,7 +9,15 @@
 </head>
 <body>
     <script>
-        ajax();
+       function fun(o,n){
+           console.log(n);
+           return {
+               fun: function (m){
+                   return fun(m,o)
+               }
+           }
+       }
+       var a = fun(0).fun(1).fun(2).fun(3)
     </script>
 </body>
 </html>

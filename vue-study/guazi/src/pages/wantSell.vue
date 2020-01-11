@@ -18,7 +18,6 @@ import BottomContent from "@/components/sell_components/BottomContent";
 import MidNav from "@/components/sell_components/MidNav";
 import Footer from "@/components/common_components/footer/footer";
 import rightBox from "@/components/common_components/rightBox";
-
 export default {
   data() {
     return {
@@ -59,9 +58,6 @@ export default {
       },
       false
     );
-    window.onmousewheel=()=>{
-      this.changeFlag()
-    }
   },
   methods: {
   changeFlag(){

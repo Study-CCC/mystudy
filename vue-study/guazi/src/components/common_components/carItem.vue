@@ -1,7 +1,7 @@
 <template>
   <div class="carItem">
     <a href="#">
-      <img :src="item.imgSrc" alt />
+      <img v-lazy="item.imgSrc" alt />
       <div class="carInfo">
         <h2>{{item.carName}}</h2>
         <div class="t-i">
