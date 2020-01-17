@@ -8,6 +8,6 @@ server.on("request",(req,res)=>{
     res.end()*/
     res.end('hello node')  // 更简单
 })
-server.listen("3000",()=>{
+server.listen("3001",()=>{
     console.log("服务器启动成功");
 })
