@@ -63,6 +63,7 @@ server.on("request", (req, res) => {
         comments.unshift(comment)
         res.statusCode=302
         res.setHeader("location","/")
+        // 一定要以end结尾
         res.end()
     }
 })
