@@ -41,6 +41,7 @@ server.on("request", (req, res) => {
                 var htmlStr = template.render(data.toString(),{comments})
                 res.end(htmlStr)
             }
+            
         })
     }else if(resUrl.indexOf("/public")===0){
         fs.readFile(`.${resUrl}`,(err,data)=>{
