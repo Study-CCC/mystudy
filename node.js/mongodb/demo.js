@@ -5,10 +5,6 @@ mongoose.connect('mongodb://localhost/student');
 
 // 2. 设计文档结构，约束的目的是确保数据的完整性
 var userSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        require: true    // require为是否必需
-    },
     name: {
         type: String,
         require: true
@@ -31,7 +27,6 @@ const Student = mongoose.model('Student', userSchema);
 
 // 增操作 sava
 // const stu = new Student({
-//    id:3,
 //    name:"孙六",
 //    gender:0,
 //    age:18,
