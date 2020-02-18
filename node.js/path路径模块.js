@@ -18,5 +18,8 @@ console.log(path.extname("c:/a/v/c.html"));
 console.log(path.isAbsolute("/a/v/c"));
 console.log(path.isAbsolute("./a/v/c"));
 
+// resolve 转化为一个绝对路径
+console.log(path.resolve("dist"))
+
 // parse 将路径转化为对象,输出 root base dir extname 
 console.log(path.parse("c:/a/v/c"));

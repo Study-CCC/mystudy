@@ -1,4 +1,7 @@
+VUE 是目前最火的一个前=前端框架,Vue 的核心库只关注视图层，方便与第三方库或既有项目整合。
 1.MVC 和 MVVM 的区别
+MVC 是model view control 模型 视图 和
+MVVM是Model-View-ViewModel的简写
 2.学习了vue中最基本的代码结构
 3.插值表达式 v-cloak v-text v-html v-bind v-model v-if v-if v-on
 4.事件修饰符 .stop .prevent .capture .self .once
