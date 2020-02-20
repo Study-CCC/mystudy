@@ -10,3 +10,4 @@ MVVM是Model-View-ViewModel的简写
 7.在v-for要会使用key属性（只接受string/number）
 8.v-model只用应用于表单元素
 9.在vue中绑定样式两种方式v-bind:class v-bind:style 
+vue key的作用:https://www.cnblogs.com/miluluyo/p/11215127.html
