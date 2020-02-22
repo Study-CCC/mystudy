@@ -1,6 +1,7 @@
-import React from "react"
+import React,{Component} from "react"
 import ReactDom from "react-dom"
 
+import CmtItem from "@/CmtItem"
 // 参数1: 元素类型
 // 参数2: 元素属性对象
 // 参数3: 子节点或者文本信息
@@ -16,8 +17,34 @@ let hm = <div>123</div>
 function Hello(props) {
     return <div>123456---{props.a}---{props.b}</div>
 }
+class Abc extends React.Component{
+    constructor(){
+    super()}
+    render(){
+        return <div>12</div>
+    }
+}
 const data = {
     a: 111,
     b: 222
 }
-ReactDom.render(<Hello {...data}></Hello>, document.getElementById("app"))
+
+
+class Cmt extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            CommentsList: [
+                { id: 1, user: '张三',content:'abc'},
+                { id: 2, user: '李四',content:'efd' },
+                { id: 3, user: '王五',content:'fasfas' }
+            ]
+        }
+    }
+    render() {
+        return <div><p>这是评论列表</p>{this.state.CommentsList.map(item=><CmtItem {...item} key={item.id}></CmtItem>)}</div>
+    }
+
+}
+// ReactDom.render(<Hello {...data}></Hello>, document.getElementById("app"))
+ReactDom.render(<Cmt></Cmt>,document.getElementById("app"))

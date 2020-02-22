@@ -1,0 +1,16 @@
+.fontColor{
+    color: red;
+}
+.fontSize{
+    font-size: 35px;
+}
+
+/*css模块化只对类选择器和ID选择器生效,对标签选择器无效*/
+h1{
+    color: yellow
+}
+
+/*被:global()包裹起来的类名,不会被模块化,而是会全局生效*/
+:global(.abc){
+    font-style: italic;
+}
