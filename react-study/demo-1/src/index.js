@@ -21,7 +21,11 @@ class Abc extends React.Component{
     constructor(){
     super()}
     render(){
-        return <div>12</div>
+        return <div>12<button onClick={this.a}>1234</button></div>
+    }
+    a() {
+        console.log("124");
+        
     }
 }
 const data = {
@@ -44,7 +48,25 @@ class Cmt extends React.Component {
     render() {
         return <div><p>这是评论列表</p>{this.state.CommentsList.map(item=><CmtItem {...item} key={item.id}></CmtItem>)}</div>
     }
-
+}
+class DataDom extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            msg: 'abc'
+        }
+    }
+    bindData(e){
+        // console.log(e.target.value);
+        this.setState({
+            msg:this.refs.abc.value
+        })
+        
+    }
+    render(){
+        return <input value={this.state.msg} ref='abc' onChange={e=>{this.bindData(e)}}></input>
+    }
+     
 }
 // ReactDom.render(<Hello {...data}></Hello>, document.getElementById("app"))
-ReactDom.render(<Cmt></Cmt>,document.getElementById("app"))
+ReactDom.render(<DataDom></DataDom>,document.getElementById("app"))

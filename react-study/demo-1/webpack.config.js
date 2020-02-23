@@ -12,8 +12,8 @@ module.exports={
     module:{    //所有第三方模块的配置规则
         rules:[   // 第三方匹配规则
             {test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/},    // 千万别忘记添加 exclude 排除项
-            {test: /\.css$/,use:['style-loader','css-loader?modules&localIdentName[path][hash:6]']},
-            {test: /\.ttf|woff|woff2|eot|svg$/,use:'url-loader'}   // 打包处理 字体文件的loader
+            {test: /\.css$/,use:['style-loader','css-loader?modules']},
+            {test: /\.ttf|woff|woff2|eot|svg$/,use:['url-loader','file-loader']}   // 打包处理 字体文件的loader
             
         ]
     },
