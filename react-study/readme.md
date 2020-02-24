@@ -13,3 +13,6 @@ React的几个重要概念
 3. JSX语法: 就是符合xml规范的js与语法
 
 key的作用:https://www.cnblogs.com/miluluyo/p/11215127.html
+
+4. React脚手架  npm i -g create-react-app  
+    使用 create-react-app demoName  

@@ -17,7 +17,5 @@ class DataDom extends React.Component {
     }
     render() {
         return <input value={this.state.msg} ref='abc' onChange={e => { this.bindData(e) }}></input>
-
     }
-
 }
