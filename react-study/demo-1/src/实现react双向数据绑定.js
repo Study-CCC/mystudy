@@ -10,6 +10,8 @@ class DataDom extends React.Component {
     }
     bindData(e) {
         // console.log(e.target.value);
+        // console.log(this);
+        
         this.setState({
             msg: this.refs.abc.value
         })
