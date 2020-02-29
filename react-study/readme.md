@@ -28,8 +28,8 @@ key的作用:https://www.cnblogs.com/miluluyo/p/11215127.html
     public存放一些公共资源 public/manifest.json 为移动端的一些配置
     src为入口文件 
     .gitignore 为配置git中忽视的文件
-  
-
+6. Redux 提供可预测化的状态管理
+    thunk 为redux的中间件(https://www.cnblogs.com/chaoyuehedy/p/9713167.html)
 坑1：
   //删除单项服务
     deleteItem(index){
