@@ -1,0 +1,26 @@
+.mainDiv{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+.leftNav{
+    width: 300px;
+
+}
+.leftNav ul{
+    list-style: none;
+    margin-top: 50px;
+}
+.leftNav li{
+    margin-top: 20px;
+    margin-right: 10px;
+} 
+.leftNav a{
+    text-decoration: none;
+    font: 1.5em sans-serif;
+    color: teal;
+}
+.rightMain{
+
+}

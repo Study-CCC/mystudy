@@ -17,7 +17,6 @@ function Comp(props) {
                 )}></List>
         </div>
     )
-
 }
 const stateProps = (state) => {
     return {
