@@ -1,4 +1,4 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Example6 from './example6'
-ReactDOM.render(<Example6 />,document.getElementById('root'))
+import Example7 from './Example7'
+ReactDOM.render(<Example7 />,document.getElementById('root'))
