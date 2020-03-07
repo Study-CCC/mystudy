@@ -7,7 +7,7 @@ import List from './list'
 import "../public/static/style/pages/index.css"
 import Author from '../components/Author'
 import Advert from '../components/Advert'
-const Home = () => (
+const Home = () =>{ return (
   <div className="container">
     <Head>
       <title>Home</title>
@@ -24,5 +24,17 @@ const Home = () => (
       </Col>
     </Row>
     </div>
-)
+)}
+Home.getInitialProps = async ()=>{
+  const promise = new Promise((resolve)=>{
+    axios('http://127.0.0.1:7001/default/getArticleList').then(
+      (res)=>{
+        //console.log('远程获取数据结果:',res.data.data)
+        resolve(res.data)
+      }
+    )
+  })
+
+  return await promise
+}
 export default Home

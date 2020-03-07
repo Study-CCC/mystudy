@@ -29,8 +29,7 @@ key的作用:https://www.cnblogs.com/miluluyo/p/11215127.html
     src为入口文件 
     .gitignore 为配置git中忽视的文件
 
-
-
+6. Markdown 是一种可以使用普通文本编译器编写的标记语言,通过简单的标记语言,它可以使普通文本内容具有一定的格式
     
 坑1：
   //删除单项服务
