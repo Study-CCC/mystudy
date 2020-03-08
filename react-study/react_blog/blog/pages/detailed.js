@@ -91,7 +91,6 @@ const Detailed = () => {
               <MarkNav
                 className="article-menu"
                 source={markdown}
-
                 ordered={false}
               />
             </div>
@@ -103,5 +102,20 @@ const Detailed = () => {
     </>
   )
 }
+Detailed.getInitialProps = async(context)=>{
 
+  console.log(context.query.id)
+  let id =context.query.id
+  const promise = new Promise((resolve)=>{
+
+    axios('http://127.0.0.1:7001/default/getArticleById/'+id).then(
+      (res)=>{
+        console.log(title)
+        resolve(res.data.data[0])
+      }
+    )
+  })
+
+  return await promise
+}
 export default Detailed
