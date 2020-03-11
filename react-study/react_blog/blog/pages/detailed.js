@@ -7,11 +7,10 @@ import Header from '../components/Header'
 import Author from '../components/Author'
 import Advert from '../components/Advert'
 import Footer from '../components/Footer'
+import  servicePath  from '../config/apiUrl'
 import '../public/static/style/pages/detailed.css'
-import marked from 'marked'
-import hljs from "highlight.js";
-import 'highlight.js/styles/monokai-sublime.css';
-const Detailed = () => {
+import MarkNav from 'markdown-navbar';
+import 'markdown-navbar/dist/navbar.css';const Detailed = () => {
   const renderer = new marked.Renderer();
   // renderer: 这个是必须填写的，你可以通过自定义的Renderer渲染出自定义的格式
 
@@ -101,15 +100,15 @@ const Detailed = () => {
     </>
   )
 }
-Detailed.getInitialProps = async (context) => {
+Detailed.getInitialProps = async(context)=>{
 
   console.log(context.query.id)
-  let id = context.query.id
-  const promise = new Promise((resolve) => {
+  let id =context.query.id
+  const promise = new Promise((resolve)=>{
 
-    axios('http://127.0.0.1:7001/default/getArticleById/' + id).then(
-      (res) => {
-        console.log(title)
+    axios(servicePath.getArticleById+id).then(
+      (res)=>{
+        // console.log(title)
         resolve(res.data.data[0])
       }
     )

@@ -6,6 +6,14 @@ class HomeController extends Controller{
         // this.ctx.body='1234x'
        await this.getArticleList()
     }
+    
+  //得到类别名称和编号
+  async getTypeInfo(){
+
+    const result = await this.app.mysql.select('type')
+    this.ctx.body = {data:result}
+
+}
     async getArticleList(){
 
         let sql = 'SELECT article.id as id,'+

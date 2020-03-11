@@ -9,6 +9,7 @@ import "../public/static/style/pages/index.css"
 import Author from '../components/Author'
 import Advert from '../components/Advert'
 import axios from 'axios'
+import  servicePath  from '../config/apiUrl'
 const Home = ({ data }) => {
   return (
     <div className="container">
@@ -20,8 +21,8 @@ const Home = ({ data }) => {
         <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
           <List data={data} />
           <div className="list-title">
-            <Link href={{ pathname: '/detailed', query: { id: item.id } }}>
-              <a>{item.title}</a>
+            <Link href={{ pathname: '/detailed', query: { id: data.id } }}>
+              <a>{data.title}</a>
             </Link>
           </div>
         </Col>
@@ -34,11 +35,10 @@ const Home = ({ data }) => {
     </div>
   )
 }
-Home.getInitialProps = async () => {
-  const promise = new Promise((resolve) => {
-    axios('http://127.0.0.1:7001/default/getArticleList').then(
-      (res) => {
-        // console.log('远程获取数据结果:',res.data)
+Home.getInitialProps = async ()=>{
+  const promise = new Promise((resolve)=>{
+    axios(servicePath.getArticleList).then(
+      (res)=>{
         resolve(res.data)
       }
     )
@@ -46,4 +46,5 @@ Home.getInitialProps = async () => {
 
   return await promise
 }
+
 export default Home
