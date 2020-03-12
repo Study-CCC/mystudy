@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import Home from './pages/Home'
+import AppRouter from './AppRouter'
 import 'antd/dist/antd.css'
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<AppRouter />, document.getElementById('root'));

@@ -21,6 +21,6 @@
 .header-beta{
     height: 20px;
 }
-body :global(.ant-menu){
+.body :global(.ant-menu .ant-menu-light .ant-menu-root .ant-menu-horizontal){
     background-color: transparent;
 }

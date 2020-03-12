@@ -18,6 +18,64 @@
         // var reg =  /\d/gi;
         // 字符类
         // 量词符
+        // n+ 至少匹配一个 n*匹配0到多个 n? 匹配包含零个或一个n的字符串 
+        // n{x} 匹配包含连续x个n的字符串 n{x,y} 匹配包含至少x个至多y个
+        // n{x,} 匹配包含至少连续x个n的字符串
+        //非捕获用法，以(?)形式出现
+        //(?=n ) 匹配任何其后紧跟字符n的字符串，但返回中不包含n
+        // (?!n ) 匹配任何其后没有紧跟字符n的字符串，返回中不包含n
+        //(?<=n ) 匹配任何其前紧跟字符n的字符串，返回中不包含n
+        var a = "12acerdw23.ace52SaWEewr"
+        // 小括号用法 表示对匹配的字符串进行分组
+        var exp = /([a-z]+\d+)+/
+        // 对匹配到的字符捕获
+        var exp1 = /[a-z]+(\d+)/
+        var e= a.match(exp)
+        console.log(e);
+        // 匹配a-z的字符
+        var reg = new RegExp('\[a-z]', 'ig')
+        // 匹配 0-9开头的字符
+        var reg1 = new RegExp('\^[0-9]', 'ig')
+        // 匹配 不包括abc的字符
+        var reg2 = new RegExp('\[^abc]+', 'ig')
+        // 匹配 0-9或者a-z的字符串
+        var reg3 = new RegExp('\[0-9]+|[a-z]+', 'ig')
+        // 匹配 abe或ace或ade
+        var reg4 = new RegExp('a[bcd]e', 'ig')
+        // 匹配 所有单词字符（数字、字母、下划线）
+        var reg6 = /\w/g
+        // 匹配任意单词字符，与\w相反
+        var reg7 = /\W/g
+        // 匹配数字，等价于 [0-9]
+        var reg8 = /\d/g
+        // 匹配非数字
+        var reg9 = /\D/g
+        // 匹配单词边界，注意连续的数字、字母或下划线组成的字符串会认为一个单词
+        var reg10 = /\b/g
+        var c = a.match(reg10)
+        var bool = reg3.test(a)
+        console.log(c);
+
+        //QQ号的匹配
+        var qqReg = /^[1-9][0-9]{4,9}$/
+        var test  = qqReg.test("21344423432312")
+        console.log(test);
+// 年龄:
+// 条件:
+// 1. 1-130岁之间
+// 2. 第一个数字不能为0
+// 3. 大于100, 第一个数字只能是1
+// 4. 最大130岁
+        var yearReg = /^([1-9][0-9]|1[0-2][0-9]|130)$/
+        console.log(yearReg.test("170"))
+//         用户名:
+// 条件:
+// 必须用英文字母做第一位
+// 长度不能超过10
+// 除第一位，可以使用字母和数字
+        var userReg = /^[A-z]([A-z]|[0-9]){0,9}$/
+        console.log(userReg.test("hdg4324233"))
     </script>
 </body>
+
 </html>
