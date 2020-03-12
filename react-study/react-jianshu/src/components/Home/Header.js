@@ -1,30 +1,36 @@
 import React from 'react'
-import { Row, Col,Input,Menu } from 'antd'
-import sv from '../../static/icon/beta.png'
+import { Row, Col, Input, Menu, Button } from 'antd'
 import '../../static/style/Header.css'
 import { MenuFoldOutlined, DownloadOutlined } from '@ant-design/icons';
-const { Search} = Input
+const { Search } = Input
 const Header = () => {
     return (<div className='header'>
         <Row justify="center">
-            <Col span={4}><img src={sv} /></Col>
-            <Col span={4}>
+            <Col span={4}><img className="header-logo" src={require("../../static/icon/logo.png")} /></Col>
+            <Col span={10}>
                 <Menu mode="horizontal">
                     <Menu.Item><MenuFoldOutlined />首页</Menu.Item>
                     <Menu.Item><DownloadOutlined />下载App</Menu.Item>
-                </Menu>
-                </Col>
-            <Col span={6}><Search
-                placeholder="input search text"
+                    <Search
+                enterButton
+                placeholder="搜索"
                 onSearch={value => console.log(value)}
-                style={{ width: 200 }}
-            /></Col>
+                style={{ width: 300 }}
+            />
+                </Menu>
+            </Col>
             <Col span={8}>
                 <i></i>
-                <img src="../../static/icon/beta.png" />
+                <img className=" " src={require('../../static/icon/beta.png')} />
                 <a>登录</a>
+                <Button type="primary" shape="round" size={'large'} className="register-btn" >
+                    注册
+        </Button>
+                <Button className="write-btn" type="primary" shape="round" size={'large'}>
+                    写文章
+        </Button>
             </Col>
         </Row>
-     </div>)
+    </div>)
 }
 export default Header
