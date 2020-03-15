@@ -3,7 +3,7 @@ var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '123456',
-  database : 'chat'
+  database : 'react_blog'
 });
  
 // 2.连接数据库
@@ -11,7 +11,7 @@ connection.connect();
  
 // 3.执行数据库操作
 // 查找
-connection.query('SELECT * FROM user_info', function (error, results, fields) {
+connection.query('SELECT * FROM users', function (error, results, fields) {
   if (error) throw error;
   console.log(results);
 });

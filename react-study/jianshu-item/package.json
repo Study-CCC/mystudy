@@ -1,5 +1,5 @@
 {
-  "name": "react-jianshu",
+  "name": "jianshu-item",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,7 +40,6 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "mini-css-extract-plugin": "0.9.0",
-    "mysql": "^2.18.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.0",
     "postcss-flexbugs-fixes": "4.1.0",

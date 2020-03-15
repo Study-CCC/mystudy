@@ -1,0 +1,26 @@
+.header{
+    background-color: #e7e7e7;
+    height: 60px;
+    border-bottom: 1px solid #000;
+}
+.header-logo{
+    height: 50px;
+}
+/* .register-btn{
+    background-color: #fff !important;
+    color: red !important;
+    border: rgba(236,97,73,.7) 1px solid !important;
+}
+.register-btn:hover{
+    background-color: rgba(236,97,73,.05) !important;
+}
+.write-btn{
+    background-color:rgba(236,97,73,.7) !important ;
+    border: 0 !important;
+} */
+.header-beta{
+    height: 20px;
+}
+.body :global(.ant-menu .ant-menu-light .ant-menu-root .ant-menu-horizontal){
+    background-color: transparent;
+}

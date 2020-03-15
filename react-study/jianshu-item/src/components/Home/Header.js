@@ -16,7 +16,7 @@ const Header = () => {
                 </Col>
                 <Col span={6}>
                 <Search
-                    enterButton
+                enterButton
                     placeholder="input search text"
                     onSearch={value => console.log(value)}
                     style={{ width: 300 }}
