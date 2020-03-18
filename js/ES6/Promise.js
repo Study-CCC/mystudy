@@ -27,7 +27,7 @@ var fn1 = function(){
     return new Promise((resovle,reject)=>{
         setTimeout(()=>{
             console.log(1);
-            resovle()
+            resovle(2321)
         },10)
     })
 }
@@ -46,7 +46,7 @@ var fn3 = function(){
         },20)
     })
 }
-fn1().then(fn2).then(fn3)
+// fn1().then(fn2).then(fn3)
 // p1.then(() => {
 //     console.log(2);
 //     throw Error("aa")

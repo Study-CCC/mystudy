@@ -1,2 +1,4 @@
 使用antd需要先导入样式
-react解决跨域 
+react解决跨域 可以在后端koa上使用cors
+koa使用post要用koa-bodyparser中间件
+使用post获取路由上参数ctx.request.body.params
