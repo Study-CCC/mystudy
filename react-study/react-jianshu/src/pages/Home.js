@@ -6,12 +6,16 @@ import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import Axios from 'axios';
 const Home = () => {
     const [listData,setListData] = useState([])
-    useEffect(async()=>{
-        console.log(123)
-      const data = await Axios.get("http://localhost:8080/getlist")
-      setListData(data.data)
+    const [commentList,setCommentList] = useState([])
+    useEffect(()=>{
+        const fetch = async()=>{
+            const data = await Axios.get("http://localhost:8080/getlist")
+            const commentData = await Axios.get("http://localhost:8080/recommend")
+            setListData(data.data)
+            setCommentList(commentData.data)
+        }
+        fetch()
     })
-   
     // const listData = [{
     //     articleName: '敬畏自然',
     //     articleCon: '武汉新型冠状病毒产生的疫情牵动着全国每一个家庭，让整个国家陷入一场危~难之中。 新型病毒到底来源于何方，目前尚不能盖~棺定论，不过野生动物携带这...',
@@ -33,20 +37,20 @@ const Home = () => {
     //     imgSrc: null,
     //     id: 1
     // }];
-    const commentList = [{
-        authorName: '董克平日记',
-        hadWrite: '877393',
-        like: 3128,
-        iconImg: 'https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
-        id: 0
-    },
-    {
-        authorName: '梅拾璎',
-        hadWrite: '273969',
-        like: '3128',
-        iconImg: 'https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
-        id: 1
-    }]
+    // const commentList = [{
+    //     authorName: '董克平日记',
+    //     hadWrite: '877393',
+    //     like: 3128,
+    //     iconImg: 'https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
+    //     id: 0
+    // },
+    // {
+    //     authorName: '梅拾璎',
+    //     hadWrite: '273969',
+    //     like: '3128',
+    //     iconImg: 'https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
+    //     id: 1
+    // }]
 
     const IconText = ({ icon, text }) => (
         <span>

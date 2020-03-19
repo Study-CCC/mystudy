@@ -2,7 +2,11 @@ var router = require('koa-router')()
 var db = require('./api/databaseApi')
 
 router.get("/getlist",async (ctx,next)=>{
-    const list = db.getList()
+    const list =await db.getList()
+    ctx.body=list
+})
+router.get("/recommend",async (ctx,next)=>{
+    const list =await db.getRecommend()
     ctx.body=list
 })
 router.post('/login',async (ctx,next)=>{

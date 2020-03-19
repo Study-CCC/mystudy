@@ -3,7 +3,7 @@ const db = require('./databaseApi')
 // //     console.log(res)
 // // }).catch(()=>{console.log("error")})
 const a = async ()=>{
-   const data = await db.register({id:1,userName:1234,password:1232,isLogin:0})
+   const data = await db.getList()
    console.log(data)
 }
 a()

@@ -22,8 +22,9 @@ const search = (user) =>(query(`SELECT * FROM users where ${Object.keys(user)[0]
 const register = (user) => query(`INSERT INTO users set?`,user)
 const isLogin = (user) => { query(`SELECT ${user} FROM users`).then((res) => (user.isLogin == 0 ? false : true)) }
 const login = (user) => query(`UPDATE users SET isLogin=1 WHERE ${Object.keys(user)[0]}=${Object.values(user)[0]} and ${Object.keys(user)[1]}=${Object.values(user)[1]}`)
-const exit = (user) => { query(`UPDATE users SET isLogin="0" WHERE userName = ${JSON.stringify(user.userName)}`) }
+const exit = (user) => query(`UPDATE users SET isLogin="0" WHERE ${Object.keys(user)[0]}=${Object.values(user)[0]}`)
 const getList = ()=>query("SELECT * FROM home_data")
+const getRecommend = ()=>query("SELECT * FROM recommend")
 module.exports = {
     searchAll,
     search,
@@ -31,7 +32,8 @@ module.exports = {
     isLogin,
     login,
     exit,
-    getList
+    getList,
+    getRecommend
 }
 // exports.search = (user, callback) => {
 //     connection.query(`SELECT * FROM users where ${user}`, function (error, results, fields) {
