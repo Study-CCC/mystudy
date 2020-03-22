@@ -3,7 +3,7 @@ const db = require('./databaseApi')
 // //     console.log(res)
 // // }).catch(()=>{console.log("error")})
 const a = async ()=>{
-   const data = await db.getList()
+   const data = await db.search()
    console.log(data)
 }
 a()

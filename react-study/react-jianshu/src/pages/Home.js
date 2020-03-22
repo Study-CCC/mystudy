@@ -4,17 +4,32 @@ import {Link} from 'react-router-dom'
 import { Row, Col, List, Avatar } from 'antd'
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import Axios from 'axios';
+import {isLogin} from '../store/createAction'
 const Home = () => {
     const [listData,setListData] = useState([])
     const [commentList,setCommentList] = useState([])
+    const [flag,setFlag] = useState(true)
     useEffect(()=>{
+        isLogin()()
+        // console.log(111)
         const fetch = async()=>{
             const data = await Axios.get("http://localhost:8080/getlist")
             const commentData = await Axios.get("http://localhost:8080/recommend")
-            setListData(data.data)
-            setCommentList(commentData.data)
+            if(flag){
+                // console.log(222)
+                setListData(data.data)
+                // console.log(333)
+                setCommentList(commentData.data)   
+                // console.log(444)
+                setFlag(false)    
+                // console.log(555)
+            }
+            
         }
         fetch()
+        // Axios.get("http://localhost:8080/getlist").then((res)=>{
+        //     setListData(res.data)
+        // })
     })
     // const listData = [{
     //     articleName: '敬畏自然',

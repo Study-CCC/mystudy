@@ -15,6 +15,11 @@ router.post('/login',async (ctx,next)=>{
     const data = await db.login(user)
     ctx.body=data.affectedRows?true:false
 })
+router.get('/getIsLogin',async (ctx,next)=>{
+    const userData = ctx.query
+    console.log(userData)
+    ctx.body = await db.search(userData)
+})
 router.post('/register',async (ctx,next)=>{
     const user = ctx.request.body.params
     const flag = await db.search(user)

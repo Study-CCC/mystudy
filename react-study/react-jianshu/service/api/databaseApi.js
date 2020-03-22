@@ -20,7 +20,6 @@ const query = (sql, val) => {
 const searchAll = ()=>query("SELECT * FROM users")
 const search = (user) =>(query(`SELECT * FROM users where ${Object.keys(user)[0]}=${Object.values(user)[0]}`));
 const register = (user) => query(`INSERT INTO users set?`,user)
-const isLogin = (user) => { query(`SELECT ${user} FROM users`).then((res) => (user.isLogin == 0 ? false : true)) }
 const login = (user) => query(`UPDATE users SET isLogin=1 WHERE ${Object.keys(user)[0]}=${Object.values(user)[0]} and ${Object.keys(user)[1]}=${Object.values(user)[1]}`)
 const exit = (user) => query(`UPDATE users SET isLogin="0" WHERE ${Object.keys(user)[0]}=${Object.values(user)[0]}`)
 const getList = ()=>query("SELECT * FROM home_data")
@@ -29,7 +28,6 @@ module.exports = {
     searchAll,
     search,
     register,
-    isLogin,
     login,
     exit,
     getList,
