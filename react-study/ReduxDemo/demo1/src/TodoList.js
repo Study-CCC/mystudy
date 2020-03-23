@@ -6,7 +6,7 @@ import { CHANGE_INPUT,ADD_DATA,DELETE} from './store/actionType'
 class TodoList extends Component {
     constructor(props){
         super(props)
-        // console.log(store.getState())
+        console.log(store.getState())
         this.state = store.getState()
         this.storeChange = this.storeChange.bind(this)
         this.addStore = this.addStore.bind(this)

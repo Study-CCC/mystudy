@@ -1,6 +1,6 @@
 import { createStore , applyMiddleware ,compose } from 'redux'  //  引入createStore方法
 import reducer from './reducer'    
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk'        // 使用redux-thunk后action可以不止是对象还可以是函数
 
 const composeEnhancers =   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?          
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):compose            

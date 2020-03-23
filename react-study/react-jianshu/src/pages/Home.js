@@ -1,72 +1,29 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import Header from '../components/Home/Header'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Row, Col, List, Avatar } from 'antd'
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import Axios from 'axios';
-import {isLogin} from '../store/createAction'
+import { isLogin } from '../store/createAction'
+import store from '../store/index'
 const Home = () => {
-    const [listData,setListData] = useState([])
-    const [commentList,setCommentList] = useState([])
-    const [flag,setFlag] = useState(true)
-    useEffect(()=>{
-        isLogin()()
-        // console.log(111)
-        const fetch = async()=>{
+    const [listData, setListData] = useState([])
+    const [commentList, setCommentList] = useState([])
+    const [flag, setFlag] = useState(true)
+    const [loginState, setLoginState] = useState(false)
+    const state = useSelector(state=>state)
+    useEffect(() => {
+        console.log(state)
+        // const islogin = isLogin()
+        // state.dispatch(islogin)
+        const fetch = async () => {
             const data = await Axios.get("http://localhost:8080/getlist")
             const commentData = await Axios.get("http://localhost:8080/recommend")
-            if(flag){
-                // console.log(222)
-                setListData(data.data)
-                // console.log(333)
-                setCommentList(commentData.data)   
-                // console.log(444)
-                setFlag(false)    
-                // console.log(555)
-            }
-            
+            setListData([...data.data])
+            setCommentList([...commentData.data])
         }
         fetch()
-        // Axios.get("http://localhost:8080/getlist").then((res)=>{
-        //     setListData(res.data)
-        // })
-    })
-    // const listData = [{
-    //     articleName: '敬畏自然',
-    //     articleCon: '武汉新型冠状病毒产生的疫情牵动着全国每一个家庭，让整个国家陷入一场危~难之中。 新型病毒到底来源于何方，目前尚不能盖~棺定论，不过野生动物携带这...',
-    //     comNum: '131',
-    //     star: '423',
-    //     fare: '123',
-    //     diamond: '123',
-    //     author: '放下皆得',
-    //     imgSrc: 'https://upload-images.jianshu.io/upload_images/10666569-dc8b62578468db31.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
-    //     id: 0
-    // }, {
-    //     articleName: '疫情下的穷人，活着已经很不容易了',
-    //     articleCon: '今天刷公众号，看到一篇文章，写的是疫情下穷人的心酸。看了后我感触很多。 文章中提到了一个案例。卖糖葫芦的老大爷，因为疫情封了村，村里的街道上没有...',
-    //     comNum: '88',
-    //     star: '545',
-    //     fare: '4',
-    //     diamond: '34',
-    //     author: '华盛华',
-    //     imgSrc: null,
-    //     id: 1
-    // }];
-    // const commentList = [{
-    //     authorName: '董克平日记',
-    //     hadWrite: '877393',
-    //     like: 3128,
-    //     iconImg: 'https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
-    //     id: 0
-    // },
-    // {
-    //     authorName: '梅拾璎',
-    //     hadWrite: '273969',
-    //     like: '3128',
-    //     iconImg: 'https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp',
-    //     id: 1
-    // }]
-
+    }, [])
     const IconText = ({ icon, text }) => (
         <span>
             {React.createElement(icon, { style: { marginRight: 8 } })}
