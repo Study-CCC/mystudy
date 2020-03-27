@@ -1,0 +1,15 @@
+.header{
+    min-width: 960px;
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+}
+.input{
+    margin-top: 20px;
+}
+.ant-menu-horizontal > .ant-menu-item:hover {
+    background-color: #f5f5f5 !important;
+}
+.ant-menu-horizontal>.ant-menu-item-selected {
+    color: #ea6f5a !important;
+    border-bottom: 2px solid #ea6f5a !important;
+}
