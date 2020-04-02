@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // js 是词法作用域,也就是作用域在定义的时候就确定了
+        var value = 1
+        function foo() { console.log(value) }
+        function foo1() { var value = 2; foo() }
+        foo1()  // 1
+
+        f()
+        function f() {   // 函数声明
+            console.log('111')
+        }
+        // f1()   // 报错
+        var f1 = function () {  // 函数表达式
+            console.log(222)
+        }
+
+        // 变量提升
+        function fn() {
+            console.log(1)
+            var i, a;
+            for (i = 0; i < 10; i++) {
+                a = document.createElement('a')
+                a.innerHTML = i + '<br />'
+                a.addEventListener('click', function (e) {
+                    alert(i)
+                })
+                document.body.appendChild(a)
+            }
+        }
+        fn()
+
+        // 函数有一个内部属性[[scope]],当函数创建时,就会保存所以的父变量对象到其中
+        function foo() {
+            function bar() {
+
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>
