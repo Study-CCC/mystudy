@@ -1,0 +1,5 @@
+CommonJS 中require模块是只有第一次被加载时才会执行该模块，若是曾经加载过了则直接导出上次执行后得到的结果，在模块中有一个属性module下有属性loaded来记录是否加载过，若是加载过则那属性值为true,否则就为false
+node中不能直接执行es6的export和import，要通过babel进行编译解析
+
+CommonJS和ES6 Module的区别:
+    
