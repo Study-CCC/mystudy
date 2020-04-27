@@ -86,15 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/add-content.js":
-/*!****************************!*\
-  !*** ./src/add-content.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/a.js":
+/*!******************!*\
+  !*** ./src/a.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function(){\r\n    document.write('I\\'m using a config file!')\r\n});\n\n//# sourceURL=webpack:///./src/add-content.js?");
+eval("module.exports = {\r\n    add:function(a,b) {\r\n        return a+b\r\n    }\r\n}\n\n//# sourceURL=webpack:///./src/a.js?");
 
 /***/ }),
 
@@ -102,11 +101,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _add_content_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-content.js */ \"./src/add-content.js\");\n\r\ndocument.write('My first webpack app.<br />')\r\nObject(_add_content_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const a = __webpack_require__(/*! ./a */ \"./src/a.js\")\r\nconst sum = a.add(2,3)\r\nconsole.log('sum'+sum)\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

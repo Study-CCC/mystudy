@@ -14,6 +14,6 @@ function Per(){}
     console.log(per.__proto__==Per.prototype)   //true
 
 // constructor
-//  每个原型都有个constructor属性指向其关联的构造函数
+//  每个原型都有个constructor属性指向其关联的构造函数 
 // constructor的含义是指向该对象的构造函数,所以函数的最终构造函数都是function
 console.log(Per.prototype.constructor==Per)

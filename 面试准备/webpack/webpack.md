@@ -25,3 +25,56 @@ webpack-dev-server的作用:
                   2. 处理静态资源请求
     直接用webpack开发和使用webpack-dev-server有一个很大的区别,前者每次都会生成bundle.js，而webpack-dev-server只是将打包结果放在内存中，并不会写入实际的bundle.js
     webpack-dev-server还有自动刷新功能
+
+模块打包原理
+
+
+
+webpack 资源处理流程
+    在流程的开始需要一个或者多个入口，也就是告诉webpack从哪个目录下开始进行打包，根据入口可以打包出一个或者多个chunk。
+    webpack通过context和entry这两个配置项来共同决定入口文件的路径：
+        1.确认入口模块的位置
+        2.定义chunk name，如果只有一个入口文件，则默认chunk name为main，如果有多个入口，我们需要为每个chunk定义name
+    context:
+        // context 可以省略,默认值为当前工程的总目录
+        // 以下的两种配置入口都为/src/script/index.js
+            module.exports = {
+                context: path.join(__dirname,'./src'),
+                entry: './scripts/index.js,
+            },
+            module.exports = {
+                context: path.join(__dirname,'./src/scripts'),
+                entry: './index.js
+            }
+    entry:
+        entry的配置有多种形式,有:字符串、数组、对象、函数
+        1. 字符串类型入口: module.exports = {
+            entry: './src/index.js',
+            output: {
+                filename: 'bundle.js',
+            },
+            mode: 'development',
+        };
+        2. 数组类型入口: module.exports = {
+            entry:['babel-polyfill','./src/index,js'],
+        };
+        上面的配置等同于: 
+        // webpack.config.js
+        module.exports = {
+            entry: './src/index.js'
+        };
+        // index.js
+        import 'babel-polyfill'
+        3. 对象类型入口: module.exports = {
+            entry:{
+                // chunk name 为index,入口路径为./src/index.js
+                index:'./src/index.js',
+                // chunk name 为lib,入口路径为./src/lib.js
+                lib:'./src/lib.js'
+            }
+        }
+        4. 函数类型入口: module.exports = {
+            entry: ()=>'./src/index.js'
+        }
+
+    单页应用:  
