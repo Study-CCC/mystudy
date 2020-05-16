@@ -33,10 +33,22 @@
 // var bar1  = obj2.test.call(obj2)
 // bar1()
 
-function foo(a,b){
-    console.log(this)
-    this.val = a + b
-    console.log(this.val)
+// function foo(a,b){
+//     console.log(this)
+//     this.val = a + b
+//     console.log(this.val)
+// }
+// var bar =foo.bind(null,1,2)
+// bar()   
+
+var obj = {
+    a:123
 }
-var bar =foo.bind(null,1,2)
-bar()   // 
+Object.defineProperty(obj.__proto__,"b",{
+    value:5,
+    writable:false
+})
+Object.defineProperty(obj,"b",{
+    value:52,
+})
+console.log(obj.b)
