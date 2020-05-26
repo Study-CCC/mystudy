@@ -1,0 +1,13 @@
+E:\LMWorkSpace\GitHub\mystudy\myApp\bin\Debug\netcoreapp3.1\myApp.exe
+E:\LMWorkSpace\GitHub\mystudy\myApp\bin\Debug\netcoreapp3.1\myApp.deps.json
+E:\LMWorkSpace\GitHub\mystudy\myApp\bin\Debug\netcoreapp3.1\myApp.runtimeconfig.json
+E:\LMWorkSpace\GitHub\mystudy\myApp\bin\Debug\netcoreapp3.1\myApp.runtimeconfig.dev.json
+E:\LMWorkSpace\GitHub\mystudy\myApp\bin\Debug\netcoreapp3.1\myApp.dll
+E:\LMWorkSpace\GitHub\mystudy\myApp\bin\Debug\netcoreapp3.1\myApp.pdb
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.csprojAssemblyReference.cache
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.csproj.CoreCompileInputs.cache
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.AssemblyInfoInputs.cache
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.AssemblyInfo.cs
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.dll
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.pdb
+E:\LMWorkSpace\GitHub\mystudy\myApp\obj\Debug\netcoreapp3.1\myApp.genruntimeconfig.cache

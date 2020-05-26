@@ -6,6 +6,9 @@
 .input{
     margin-top: 20px;
 }
+.menu-icon{
+
+}
 .ant-menu-horizontal > .ant-menu-item:hover {
     background-color: #f5f5f5 !important;
 }

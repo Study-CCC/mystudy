@@ -29,7 +29,7 @@
         GET是用来获取资源,POST是用来提交数据
         具体区别：
             1.缓存:GET请求会被浏览器主动缓存起来,而POST默认不会
-            2.编码:GET只能继续URL编码，只能接收ASCII字符，而POST没有限制
+            2.编码:GET只能进行URL编码，只能接收ASCII字符，而POST没有限制
             3.参数：GET一般放在URL中，因此不安全，POST放在请求体中，更适合传输敏感信息
             4.幂等：GET是幂等的，POST不是。(幂等表示执行相同的操作，结果也是相同的)
             5.TCP：GET请求会把请求报文一次性发出去,而POST会分为两个TCP数据包,首先发送header部分,服务器响应100然后再发送body(火狐浏览器除外,它的post只发一个包)
@@ -64,3 +64,36 @@
     4.支持客户/服务器模式
     5.无连接：无连接的含义是限制每次连接只处理一个请求，处理完客户请求，并收到客户的应答后，即断开连接，不再需要为多个对象创建多个连接，
              采用这种方式可以节省传输时间
+6. http缺点
+    1. 无状态: 在需要进行长连接的场景中,需要保存大量的上下文以避免传输大量的信息,这时候无状态就算http的缺点了
+    2. 明文传输: 为了方便调试,http的报文头部不为2进制,而是直接的文本形式,这样就把信息直接http的报文信息暴露给了外界,给攻击者提供了便利。
+                WiFi陷阱就是通过这种方式,诱导你连上热点,然后疯狂抓你流量,从而拿到你的敏感信息
+    3. 队头堵塞问题： 当http开启长连接时,共用一个TCP连接,同一时刻只能处理一个请求,请求耗时长的情况下,其他请求处于堵塞状态
+7. Accept系列字段    
+    数据格式
+        可以在content-type这个字段中标记发送的数据类型,接受方想要收到指定的数据类型也可以用Accept-type字段
+    压缩方式
+        将数据进行编码压缩,采用什么压缩方式体现在发送方的Content-Encoding中,接受什么养的压缩方式体现在接受方的Accpet-Encoding中
+    支持语言
+        发送方有content-language,接受方有accept-type
+        // 发送端
+        Content-Language: zh-CN, zh, en
+        // 接收端
+        Accept-Language: zh-CN, zh, en
+    字符集
+        在接收端对应为Accept-Charset，指定可以接受的字符集，而在发送端并没有对应的Content-Charset, 而是直接放在了Content-Type中，以charset
+        属性指定。
+        // 发送端
+        Content-Type: text/html; charset=utf-8
+        // 接收端
+        Accept-Charset: charset=utf-8
+8. 定长和不定长数据,http是怎么传输的
+    定长数据
+        通过Content-Length,若Content-Length大于实际数据长度，则会导致传输失败
+    不定长数据
+        通过Transfer-Encoding:chunked
+        添加这个字段后会自动产生两个效果:
+         content-length效果会失效
+         基于长时间的推送传输内容
+9. HTTP是如何处理大文件的传输
+    
