@@ -64,7 +64,12 @@
               icon="el-icon-edit"
               @click="editRole(rolesInfo.row)"
             >编辑</el-button>
-            <el-button type="warning" size="mini" icon="el-icon-share" @click="showSetRight">分配权限</el-button>
+            <el-button
+              type="warning"
+              size="mini"
+              icon="el-icon-share"
+              @click="showSetRight(rolesInfo.row)"
+            >分配权限</el-button>
             <el-button
               type="danger"
               size="mini"
@@ -77,6 +82,7 @@
     </el-card>
     <el-dialog title="提示" :visible.sync="treeRolesVisible" width="30%">
       <el-tree
+        ref="treeRef"
         :props="defaultProps"
         :data="treeRoles"
         node-key="id"
@@ -85,7 +91,7 @@
       ></el-tree>
       <span slot="footer" class="dialog-footer">
         <el-button @click="treeRolesVisible = false">取 消</el-button>
-        <el-button type="primary" @click="treeRolesVisible = false">确 定</el-button>
+        <el-button type="primary" @click="addRoles">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -94,9 +100,10 @@
 export default {
   data() {
     return {
+      rolesId:'',
       rolesList: [],
       treeRoles: [],
-      defaultKeys: [],
+      defaultKeys: [104],
       defaultProps: {
         label: "authName",
         children: "children"
@@ -108,13 +115,32 @@ export default {
     this.getRolesList();
   },
   methods: {
-    async showSetRight() {
+    async addRoles(a){
+      const checkedKeys = [...this.$refs.treeRef.getHalfCheckedKeys(),...this.$refs.treeRef.getCheckedKeys()]
+      const {data:res} = await this.$http.post(`roles/${this.rolesId}/rights`,{rids:checkedKeys.join(',')})
+      // console.log(checkedKeys)
+      if(res.meta.status!==200) return this.$message.error("分配权限失败")
+      this.treeRolesVisible = false
+      this.getRolesList()
+      this.$message.success("分配权限成功")
+    },
+    async showSetRight(roles) {
       const { data: res } = await this.$http.get("rights/tree");
       if (res.meta.status !== 200)
         return this.$message.error("获取权限信息失败");
       this.treeRoles = res.data;
-      console.log(this.treeRoles);
+      this.defaultKeys = []
+      this.getLeafNode(roles)
       this.treeRolesVisible = !this.treeRolesVisible;
+      this.rolesId = roles.id
+    },
+    getLeafNode(node){
+      if(!node.children){
+        return this.defaultKeys.push(node.id)
+      }
+       node.children.map(item=>{
+         this.getLeafNode(item)
+       }) 
     },
     tagClose(role, rightId) {
       this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
@@ -126,7 +152,6 @@ export default {
           const { data: res } = await this.$http.delete(
             `roles/${role.id}/rights/${rightId}`
           );
-          // console.log(res)
           if (res.meta.status !== 200) return new Error();
           // 由于删除后会返回最新的权限信息,为了避免重复渲染页面，只更新role.child下的数据即可
           role.children = res.data;
@@ -144,24 +169,9 @@ export default {
     },
     async getRolesList() {
       const { data: res } = await this.$http.get("roles");
-      console.log(res.data);
       if (res.meta.status !== 200)
         return this.$message.error("权限列表获取失败");
       this.rolesList = res.data;
-      for (let i = 0; i < res.data.length; i++) {
-        let item = res.data[i];
-        // console.log(item.children.length);
-          for (let j = 0; j < item.children.length; j++) {
-          let childItem = item.children[j];
-          // console.log(childItem);   
-          this.defaultKeys.push(childItem.id);
-          for (let m = 0; m < childItem.children.length; m++) {
-            let childItem1 = childItem.children[m];
-            this.defaultKeys.push(childItem1.id);
-          }
-        }
-      }
-      // console.log(this.defaultKeys)
     },
     editRole(user) {},
     deleteRoles(id) {

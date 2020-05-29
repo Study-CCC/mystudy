@@ -48,9 +48,21 @@
                 @click="showEditUser(userInfo.row)"
               ></el-button>
             </el-tooltip>
-            <el-button type="warning" size="mini" icon="el-icon-share"></el-button>
+            <el-tooltip class="item" effect="dark" content="分配角色" placement="top">
+              <el-button
+                type="warning"
+                size="mini"
+                icon="el-icon-share"
+                @click="showAllotUser(userInfo.row)"
+              ></el-button>
+            </el-tooltip>
             <el-tooltip class="item" effect="dark" content="删除" placement="top">
-              <el-button type="danger" size="mini" icon="el-icon-delete" @click="deleteUser(userInfo.row)"></el-button>
+              <el-button
+                type="danger"
+                size="mini"
+                icon="el-icon-delete"
+                @click="deleteUser(userInfo.row)"
+              ></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -86,8 +98,33 @@
         <el-button type="primary" @click="addUser">确 定</el-button>
       </div>
     </el-dialog>
+    <!-- 分配权限 -->
+    <el-dialog title="分配用户权限" :visible.sync="allotVisible" width="50%">
+      <el-form :model="userForm" ref="allotForm" label-width="100px">
+        <el-form-item label="当前的用户" prop="username">
+          <el-input v-model="userForm.username" disabled></el-input>
+        </el-form-item>
+        <el-form-item label="当前的角色" prop="role_name">
+          <el-input v-model="userForm.role_name" disabled></el-input>
+        </el-form-item>
+        <el-form-item label="分配新角色"> 
+          <el-select v-model="selectRole" placeholder="请选择">
+            <el-option
+              v-for="item in roleList"
+              :key="item.id"
+              :label="item.roleName"
+              :value="item.id"
+            ></el-option>
+          </el-select>
+        </el-form-item>
+      </el-form>
+      <div class="btn">
+        <el-button @click="allotVisible = false">取 消</el-button>
+        <el-button type="primary" @click="allotRole">确 定</el-button>
+      </div>
+    </el-dialog>
     <!-- 编辑信息 -->
-    <el-dialog title="编辑用户信息" :visible.sync="editVisible" width="50%" @close="editClosed">
+    <el-dialog title="编辑用户信息" :visible.sync="editVisible" width="50%">
       <el-form :model="userForm" :rules="rules" ref="editForm" label-width="100px">
         <el-form-item label="用户名" prop="username">
           <el-input v-model="userForm.username" disabled></el-input>
@@ -137,6 +174,8 @@ export default {
         email: "",
         mobile: ""
       },
+      selectRole:'',
+      roleList: [],
       rules: {
         username: [
           { required: true, message: "请输入账号", trigger: "blur" },
@@ -160,36 +199,44 @@ export default {
       userlist: [],
       total: 0,
       dialogVisible: false,
-      editVisible: false
+      editVisible: false,
+      allotVisible: false
     };
   },
   created() {
     this.getUserList();
   },
   methods: {
-    deleteUser(user){
-      this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then( async() => {
+    async showAllotUser(userInfo) {
+      this.userForm = userInfo;
+      this.allotVisible = true;
+      const { data: res } = await this.$http.get("roles");
+      if (res.meta.status !== 200) return;
+      this.roleList = res.data;
+    },
+    deleteUser(user) {
+      this.$confirm("此操作将永久删除该用户, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(async () => {
           // console.log(id)
-         const {data:res} = await this.$http.delete(`users/+${user.id}`)
-          console.log(res)
-          if(res.meta.status !== 200)
-           return this.$message.error("删除失败")
-          this.getUserList()
+          const { data: res } = await this.$http.delete(`users/+${user.id}`);
+          console.log(res);
+          if (res.meta.status !== 200) return this.$message.error("删除失败");
+          this.getUserList();
           this.$message({
-            type:'success',
-            message:'成功删除'
-          })
-        }).catch(() => {
+            type: "success",
+            message: "成功删除"
+          });
+        })
+        .catch(() => {
           this.$message({
-            type: 'info',
-            message: '已取消删除'
-          });          
+            type: "info",
+            message: "已取消删除"
+          });
         });
-      
     },
     editClosed() {
       this.$refs.editForm.resetFields();
@@ -209,7 +256,6 @@ export default {
     },
     showEditUser(userInfo) {
       this.userForm = userInfo;
-      // console.log(this.userForm)
       this.editVisible = true;
     },
     async getUserList() {
@@ -231,6 +277,14 @@ export default {
     handleCurrentChange(res) {
       this.queryInfo.pagenum = res;
       this.getUserList();
+    },
+    async allotRole(){
+      const {data:res} = await this.$http.put(`users/${this.userForm.id}/role`,{rid:this.selectRole})
+      // console.log(this.userForm.id)
+      if(res.meta.status!==200) return this.$message.error("分配失败")
+      this.$message.success("分配成功")
+      this.getUserList()
+      this.allotVisible = false
     },
     addUser() {
       this.$refs.ruleForm.validate(async valid => {
