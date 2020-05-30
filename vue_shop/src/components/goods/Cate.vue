@@ -39,7 +39,7 @@
         </template>
       </tree-table>
     </el-card>
-    <el-dialog title="添加分类" :visible.sync="showClassify" width="50%">
+    <el-dialog title="添加分类" @close="addCateDialogClosed" :visible.sync="showClassify" width="50%">
       <el-form ref="addCateForm" :model="addCateForm" label-width="100px" :rules="addCateFormRules">
         <el-form-item label="分类名称" prop="cat_name">
           <el-input v-model="addCateForm.cat_name"></el-input>
@@ -51,7 +51,7 @@
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button @click="showClassify = false">取 消</el-button>
-        <el-button type="primary">确 定</el-button>
+        <el-button type="primary" @click="addCate">确 定</el-button>
       </span>
     </el-dialog>
     <el-pagination
@@ -74,13 +74,13 @@ export default {
       catelist: [],
       addCateForm: {
         cat_name: "",
-        cat_pid: 0,
+        cat_pid: 0, 
         cat_level: 0
       },
       parentCateList: [],
       queryInfo: {
         query: "",
-        pagenum: 1,
+        pagenum: 5,
         pagesize: 1
       },
       selectKeys:[],
@@ -142,7 +142,31 @@ export default {
       this.getCateList();
     },
     parentCateChanged(){
-        
+        if(this.selectKeys.length>0){
+           this.addCateForm.cat_pid = this.selectKeys[this.selectKeys.length-1]
+           this.addCateForm.cat_level = this.selectKeys.length
+           return
+        }
+        else{
+            this.addCateForm.cat_pid =0;
+            this.addCateForm.cat_level = 0;
+        }
+    },
+    addCate(){
+        this.$refs.addCateForm.validate(async valid=>{
+            if(!valid) return;
+            const {data:res} =await this.$http.post('categories',this.addCateForm)
+            if(res.meta.status !== 201) return this.$message.error("添加失败")
+            this.$message.success("添加成功 ")
+            this.getCateList()
+            this.showClassify =false
+        })
+    },
+    addCateDialogClosed(){
+        this.$refs.addCateForm.resetFields()
+        this.selectKeys = []
+        this.addCateForm.cat_level = 0
+        this.addCateForm.cat_pid=0
     },
     showAddCate() {
       this.showClassify = true;
