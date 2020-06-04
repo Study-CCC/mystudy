@@ -62,6 +62,7 @@ export default {
   },
   created() {
     this.getListData();
+    this.menuList.unshift()
     this.activePath = window.sessionStorage.getItem("activePath")
   },
   methods: {

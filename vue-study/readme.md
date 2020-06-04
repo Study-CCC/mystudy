@@ -11,3 +11,23 @@ MVVM是Model-View-ViewModel的简写
 8.v-model只用应用于表单元素
 9.在vue中绑定样式两种方式v-bind:class v-bind:style 
 vue key的作用:https://www.cnblogs.com/miluluyo/p/11215127.html
+
+computed性能比methods高,computed属性具有缓存功能,在computed里面的数据没有改变时,会使用上次调用的值
+
+runtime-compiler
+template -> ast -> render -> vdom ->ui
+
+runtime-only(性能更高,代码量更少)
+render -> vdom -> ui
+
+vue-template-compiler 会将vue文件中的template转化为render函数,因此不需要使用runtime-compiler
+
+data(){
+    return{
+        obj:{
+            per:'123'
+        }
+    }
+}
+
+通过this.obj.age = 2添加的数据不具有响应式,需要使用Vue.set(Vue.obj,"age",2)可以使数据具有响应式
