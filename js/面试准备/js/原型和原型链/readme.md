@@ -1,0 +1,19 @@
+什么是原型?
+每个对象创建时都会有一个与之相关联的对象，这个对象称之为原型
+
+什么是原型链?
+原型链就是当new出一个新的对象时候,在这个对象上查找某个属性，当这个属性在这个对象上不存在的时候，会顺着对象的原型去找，如果原型上也
+没有就会顺着原型的原型去找，直到找到顶点Object.prototype上。这些原型与原型之间的链就叫做原型链,所有的原型链最终指向的都是Object.prototype,
+Object.prototype.__proto__指向null
+
+如何获取对象原型
+一个对象的__proto__指向的是对象的原型,也可以通过Object.getPrototypeOf(obj)来获取对象的原型
+函数的prototype也是指向实例的原型对象，函数的__proto__指向的是Function.prototype
+
+原型链有什么用?
+在js中没有类的继承，一般使用原型链来继承方法与属性，当构造函数创建的实例后续需要增加方法或者属性的时候，可以挂载到原型链上
+
+prototype、getPrototypeOf、__proto__之间有什么不同
+ prototype主要是通过构造函数来获取原型
+ getPrototypeOf和__proto__通过实例来获取原型,getPrototypeOf是ES5提供的标准方法，__proto__是非标准方法。
+ 一般getPrototype不能使用的时候就通过__proto__来获取
