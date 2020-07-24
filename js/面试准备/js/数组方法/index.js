@@ -57,7 +57,7 @@
 {
     let arr = [1, 2, 3, 4, 5, 6, 7]
     let arr1 = arr.slice(0, 5)
-    let arr2 = arr.slice(2)
+    let arr2 = arr.slice(2) //3，4，5，6，7
     let arr3 = arr.slice(-1)
     let arr4 = arr.slice(-4, -1)
     // console.log(arr2);
@@ -65,7 +65,7 @@
 
 //8. splice,可以用于数组的插入，删除，替换,会影响原数组
 // splice(index,num,item1....itemX)
-// index: 从第几项开始,若只存在这个则返回0到index项
+// index: 从第几项开始,若只存在这个则返回index到len项,原数组为0到index项
 // num删除几项
 // item为替换元素
 {
@@ -165,3 +165,11 @@
     }
     // console.log(newArr(arr))
 }
+// 两数组交集
+{}
+//两数组并集
+{}
+// 两数组补集
+{}
+// 类数组转换为数组
+{}
