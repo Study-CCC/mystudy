@@ -22,3 +22,13 @@ arr.toString().split(',').map(item=>{
 function reduceFlat(arr){
     return arr.reduce((prev,cur)=>prev.concat(Array.isArray(cur)?reduceFlat(cur):cur),[])
 }
+
+// 方法5: ES6的扩展运算符
+function es6Flat(arr){
+    while(arr.some(item=>Array.isArray(item))){
+        console.log(arr)
+        arr = [].concat(...arr)
+    }
+    return arr;
+}
+console.log(es6Flat(arr));
