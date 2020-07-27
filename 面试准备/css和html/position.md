@@ -1,6 +1,0 @@
- position是css中的一个定位属性,属性值有static、relative、absolute、fixed、inherit
- static就是position的默认值,不对元素位置继续改变
- relative是相对于元素自身定位，
- absolute是相对于最近的父级非static定位，若是父级中都不存在非static元素，则相对于文档定位，使用这个属性会脱离文档流
- fixed是相对于浏览器窗口进行定位，使用这个属性会脱离文档流
- inherit是从父元素里继承position的值
