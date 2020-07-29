@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            height: 400px;
+            width: 400px;
+            background-color: black;
+        }
+
+        #div2 {
+            height: 300px;
+            width: 300px;
+            background-color: skyblue;
+        }
+
+        #div3 {
+            height: 200px;
+            width: 200px;
+            background-color: white;
+        }
+
+        #div4 {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+                <div id="div4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 事件冒泡: 事件冒泡是从当前元素开始执行,然后父元素,然后祖父元素
+    事件捕获: 事件捕获是从祖父元素开始执行,然后再父元素,再当前元素,开启事件捕获是在addEventListener第三个参数设为true
+    如果一个dom中又有冒泡又有捕获的话,会优先执行捕获再执行冒泡 -->
+    <script>
+        let div1 = document.getElementById('div1')
+        let div2 = document.getElementById('div2')
+        let div3 = document.getElementById('div3')
+        let div4 = document.getElementById('div4')
+        div1.addEventListener('click', function () {
+            console.log('div1 11')
+        },true)
+        div2.addEventListener('click', function () {
+            console.log('div2')
+        })
+        div3.addEventListener('click', function () {
+            console.log('div3 11')
+        },true)
+        div4.addEventListener('click', function (event) {
+            // 阻止冒泡事件
+            event.stopPropagation();
+            console.log('div4')
+        }) 
+    </script>
+</body>
+
+</html>
