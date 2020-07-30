@@ -1,4 +1,4 @@
-// 创建对象的多种方式
+// ES5创建对象的多种方式
 // 1. 使用字面量创建
  {
      let person = {
@@ -68,3 +68,32 @@
     }
 }
 // 优点: 1. 方法不需要重新构建而且可以初始化参数
+
+// ES6的class
+// es6的class其实是一个语法糖,绝大功能可以通过es5实现,封装性更强
+// class中与es5不同点有class不能变量提升,这点是为了确保class在子类前就被定义
+// class中必须要有constructor,如果没有写,则会默认被加一个空的上去
+// class中的方法不能被枚举,即通过Object.keys(Point.prototype)枚举到,所有方法都可以通过Object.getOwnPropertyNames(Point.prototype)访问到
+// class中还有静态方法,是不可以让实例继承的,可以直接通过class类访问,也可以通过子类继承
+// class中的方法都是定义在prototype上的
+class Point {
+
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+    }
+  
+    toString() {
+      return '(' + this.x + ', ' + this.y + ')';
+    }
+  
+  }
+  
+  var point = new Point(2, 3);
+  
+  point.toString() // (2, 3)
+  
+  point.hasOwnProperty('x') // true
+  point.hasOwnProperty('y') // true
+  point.hasOwnProperty('toString') // false
+  point.__proto__.hasOwnProperty('toString') // true

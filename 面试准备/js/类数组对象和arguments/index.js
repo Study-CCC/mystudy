@@ -7,6 +7,6 @@
     Array.prototype.splice.call(arrObj,0)
     Array.prototype.concat.call(arrObj,[])
 }
-// 引用
+// 作用
 // 参数不定长
 // 函数柯里化
