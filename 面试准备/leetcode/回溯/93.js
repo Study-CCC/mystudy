@@ -1,7 +1,6 @@
 const restoreIpAddresses = (s) => { 
     let res = []
     const dfs = (strArr,len)=>{
-        console.log(strArr.length,len);
         if(strArr.length==4&&len==s.length){
             res.push(strArr.join('.'))
             return;
