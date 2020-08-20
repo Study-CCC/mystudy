@@ -94,3 +94,33 @@ class Dog implements UserClass{
         console.log(str)
     }
 }
+
+// 泛型 T表示泛型
+function getData<T>(value:T):T{
+    return value
+}
+getData<number>(123)
+getData<string>('')
+
+// 操作数据库的泛型类
+class MysqlDb<T>{
+    add(info:T):boolean{
+        return true
+    }
+}
+
+// 命名空间
+namespace A{
+   let name:string='123';
+   function eat():void{}
+}
+namespace B{
+    let name:string='123';
+ }
+
+ type  Lady  =  {name:string , age:Number};
+
+const xiaoJieJies : Lady[] = [
+    {name:'刘英',age:18},
+    {name:'谢大脚',age:28}
+]
