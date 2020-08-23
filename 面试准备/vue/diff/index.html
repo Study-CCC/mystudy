@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./createElement.js"></script>
+    <script src="./diff.js"></script>
+    <script src="./patch.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let el = createElement('ul',{class:'item'},[
+            createElement('li',{class:'item'},['a']),
+            createElement('li',{class:'item'},['b']),
+            createElement('li',{class:'item'},['2'])
+        ])
+        let el1 = createElement('ul',{class:'item1'},[
+            createElement('div',{class:'item1'},['a']),
+            createElement('li',{class:'item'},['c2'])
+        ])
+        let virtualDom = render(el)
+      renderDom(virtualDom,document.body)
+      let patches = diff(el,el1)
+      console.log(patches)
+      patch(virtualDom,patches)
+    </script>
+</body>
+</html>
