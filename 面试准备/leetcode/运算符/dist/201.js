@@ -9,3 +9,4 @@ function rangeBitwiseAnd(m, n) {
     return m << shift;
 }
 ;
+console.log(rangeBitwiseAnd(0, 1));
