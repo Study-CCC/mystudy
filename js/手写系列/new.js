@@ -1,7 +1,7 @@
-function new1() {
-  let obj = {}
-  let fn = Array.shift.call(arguments)
-  obj.__proto__ = fn.prototype
-  let ret = fn.apply(obj, arguments)
-  return typeof ret === 'object'?ret:obj
+function new (fn){
+  let newObj = {}
+  let args = Array.prototype.slice.call(arguments,1)
+  newObj.__proto__ = fn.prototype
+  let ret = fn.apply(newObj, args)
+  return typeof ret === 'object' ? ret : newObj
 }

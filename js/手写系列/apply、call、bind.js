@@ -16,12 +16,16 @@ Function.prototype.apply1 = function (obj) {
   return res;
 }
 
+// bind 当使用new的时候会忽略传入的对象，将原函数作为构造器
 Function.prototype.bind1 = function (obj) {
-  let fn = this
-  let arg = Array.from(arguments).slice(1)
-  let fn1 = function () {
-    let allArg = arg.concat(Array.from(arguments))
-    return fn.apply(obj,allArg)
+  let context = this;
+  let args = Array.from(arguments).slice(1)
+  let fn = function () {
+    let allArgs = args.concat(...arguments)
+    return context.apply(this instanceof fn?this:obj,allArgs)
   }
-  return fn1
+  let newFn = function(){}
+  newFn.prototype = context.prototype
+  fn.prototype = new newFn()
+  return fn;
 }

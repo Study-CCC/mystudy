@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="aspectration" data-ratio="16:9">
+  </div>
+</body>
+<style>
+.aspectration {
+    position: relative; /*因为容器所有子元素需要绝对定位*/
+    height: 0; /*容器高度是由padding来控制，盒模型原理告诉你一切*/
+    width: 20%; 
+    background-color: red;
+}
+
+.aspectration[data-ratio="16:9"] {
+    padding-top: 20%;
+}
+</style>
+</html>

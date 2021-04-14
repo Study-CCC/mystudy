@@ -5,6 +5,6 @@ import App from './App';
 import Cmt from "./component1"
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Cmt />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.unregister();

@@ -14,3 +14,4 @@ let newFn = say.before(function(){
     console.log('遗言');
 })
 newFn()
+

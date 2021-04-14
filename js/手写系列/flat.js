@@ -1,14 +1,10 @@
-function flat(arr,count) {
-  if (count === 0) return arr;
+function flat(arr, depth) {
+  if (depth === 0) return arr;
   let res = []
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] instanceof Array) {
-      res = res.concat(flat(arr[i],count-1))
-    } else {
-      res.push(arr[i])
-    }
+  for (let item of arr) {
+     res = res.concat(item instanceof Array?flat(item,depth-1):item)
   }
   return res;
 }
 
-console.log(flat([1, 2, [3, [4]]], 1))
+console.log(flat([1, 2, [3, [4]]], 3))
